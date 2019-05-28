@@ -250,6 +250,7 @@
             this.cbxDonVi.Name = "cbxDonVi";
             this.cbxDonVi.Size = new System.Drawing.Size(237, 26);
             this.cbxDonVi.TabIndex = 9;
+            this.cbxDonVi.SelectedIndexChanged += new System.EventHandler(this.cbxDonVi_SelectedIndexChanged);
             // 
             // txtDonGiaThuoc
             // 

@@ -21,8 +21,9 @@ namespace QLPM_GUI
         DataTable table_ChiTiet = new DataTable();
         DataTable table_DonVi = new DataTable();
         DataRow row;
-        DataRow row_thuoc;
-        int index;
+        DataRow row_thuoc,row_dv;
+        string madonvi;
+        int index, indexdv ;
         public FrmThuoc_GUI()
         {
             InitializeComponent();
@@ -96,7 +97,7 @@ namespace QLPM_GUI
 
                     th_DTO.MaThuoc = txtMaThuoc.Text.Trim();
                     th_DTO.Tenthuoc = txtTenThuoc.Text.Trim();
-                    th_DTO.MaDonVi = cbxDonVi.Text;
+                    th_DTO.MaDonVi = madonvi;
                     th_DTO.Soluong = txtSoLuongTon.Text;
                     th_DTO.Gia = txtDonGiaThuoc.Text;
                     th_BUS.NhapThongTinThuocMoi(th_DTO);
@@ -149,7 +150,7 @@ namespace QLPM_GUI
 
                     th_DTO.MaThuoc = txtMaThuoc.Text.Trim();
                     th_DTO.Tenthuoc = txtTenThuoc.Text.Trim();
-                    th_DTO.MaDonVi = cbxDonVi.Text;
+                    th_DTO.MaDonVi =  madonvi;
                     th_DTO.Soluong = txtSoLuongTon.Text;
                     th_DTO.Gia = txtDonGiaThuoc.Text;
                     th_BUS.SuaThongTinThuoc(th_DTO);
@@ -193,6 +194,13 @@ namespace QLPM_GUI
         {
             ResetForm();
             btnThem.Enabled = true;
+        }
+
+        private void cbxDonVi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexdv = cbxDonVi.SelectedIndex;
+            row_dv = table_DonVi.Rows[indexdv];
+            madonvi = row_dv["MaDonVi"].ToString();
         }
     }
 }
