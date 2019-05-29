@@ -40,15 +40,15 @@
             this.lblChiTietPhieuKham = new System.Windows.Forms.Label();
             this.lblMaPhieuKham = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
-            this.lblDonVi = new System.Windows.Forms.Label();
-            this.lblTenDonVi = new System.Windows.Forms.Label();
             this.txtTenThuoc = new System.Windows.Forms.TextBox();
             this.cbxDonVi = new System.Windows.Forms.ComboBox();
             this.txtDonGiaThuoc = new System.Windows.Forms.TextBox();
             this.txtSoLuongTon = new System.Windows.Forms.TextBox();
-            this.txtTenDonVi = new System.Windows.Forms.TextBox();
             this.lblSoLuongTon = new System.Windows.Forms.Label();
             this.gbxChiTietPhieuKham = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxNhaCungCap = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picThuoc)).BeginInit();
             this.gbxChiTietPhieuKham.SuspendLayout();
@@ -208,30 +208,6 @@
             this.lblDonGia.TabIndex = 2;
             this.lblDonGia.Text = "Đơn giá";
             // 
-            // lblDonVi
-            // 
-            this.lblDonVi.AutoSize = true;
-            this.lblDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonVi.ForeColor = System.Drawing.Color.Black;
-            this.lblDonVi.Location = new System.Drawing.Point(8, 91);
-            this.lblDonVi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDonVi.Name = "lblDonVi";
-            this.lblDonVi.Size = new System.Drawing.Size(94, 24);
-            this.lblDonVi.TabIndex = 3;
-            this.lblDonVi.Text = "Mã Đơn vị";
-            // 
-            // lblTenDonVi
-            // 
-            this.lblTenDonVi.AutoSize = true;
-            this.lblTenDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDonVi.ForeColor = System.Drawing.Color.Black;
-            this.lblTenDonVi.Location = new System.Drawing.Point(535, 92);
-            this.lblTenDonVi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTenDonVi.Name = "lblTenDonVi";
-            this.lblTenDonVi.Size = new System.Drawing.Size(102, 24);
-            this.lblTenDonVi.TabIndex = 4;
-            this.lblTenDonVi.Text = "Tên Đơn vị";
-            // 
             // txtTenThuoc
             // 
             this.txtTenThuoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -270,16 +246,6 @@
             this.txtSoLuongTon.TabIndex = 11;
             this.txtSoLuongTon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTenDonVi
-            // 
-            this.txtTenDonVi.Enabled = false;
-            this.txtTenDonVi.Location = new System.Drawing.Point(699, 92);
-            this.txtTenDonVi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenDonVi.Name = "txtTenDonVi";
-            this.txtTenDonVi.Size = new System.Drawing.Size(135, 24);
-            this.txtTenDonVi.TabIndex = 13;
-            this.txtTenDonVi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // lblSoLuongTon
             // 
             this.lblSoLuongTon.AutoSize = true;
@@ -294,14 +260,14 @@
             // 
             // gbxChiTietPhieuKham
             // 
+            this.gbxChiTietPhieuKham.Controls.Add(this.label2);
+            this.gbxChiTietPhieuKham.Controls.Add(this.cbxNhaCungCap);
+            this.gbxChiTietPhieuKham.Controls.Add(this.label1);
             this.gbxChiTietPhieuKham.Controls.Add(this.lblSoLuongTon);
-            this.gbxChiTietPhieuKham.Controls.Add(this.txtTenDonVi);
             this.gbxChiTietPhieuKham.Controls.Add(this.txtSoLuongTon);
             this.gbxChiTietPhieuKham.Controls.Add(this.txtDonGiaThuoc);
             this.gbxChiTietPhieuKham.Controls.Add(this.cbxDonVi);
             this.gbxChiTietPhieuKham.Controls.Add(this.txtTenThuoc);
-            this.gbxChiTietPhieuKham.Controls.Add(this.lblTenDonVi);
-            this.gbxChiTietPhieuKham.Controls.Add(this.lblDonVi);
             this.gbxChiTietPhieuKham.Controls.Add(this.lblDonGia);
             this.gbxChiTietPhieuKham.Controls.Add(this.lblMaPhieuKham);
             this.gbxChiTietPhieuKham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,6 +281,40 @@
             this.gbxChiTietPhieuKham.TabIndex = 25;
             this.gbxChiTietPhieuKham.TabStop = false;
             this.gbxChiTietPhieuKham.Text = "Thông tin thuốc";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(8, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Tên Đơn vị";
+            // 
+            // cbxNhaCungCap
+            // 
+            this.cbxNhaCungCap.FormattingEnabled = true;
+            this.cbxNhaCungCap.Location = new System.Drawing.Point(699, 93);
+            this.cbxNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxNhaCungCap.Name = "cbxNhaCungCap";
+            this.cbxNhaCungCap.Size = new System.Drawing.Size(135, 26);
+            this.cbxNhaCungCap.TabIndex = 33;
+            this.cbxNhaCungCap.SelectedIndexChanged += new System.EventHandler(this.cbxNhaCungCap_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(499, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 24);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Tên Nhà Cung Cấp";
             // 
             // FrmThuoc_GUI
             // 
@@ -359,14 +359,14 @@
         internal System.Windows.Forms.Label lblChiTietPhieuKham;
         internal System.Windows.Forms.Label lblMaPhieuKham;
         internal System.Windows.Forms.Label lblDonGia;
-        internal System.Windows.Forms.Label lblDonVi;
-        internal System.Windows.Forms.Label lblTenDonVi;
         internal System.Windows.Forms.TextBox txtTenThuoc;
         internal System.Windows.Forms.ComboBox cbxDonVi;
         internal System.Windows.Forms.TextBox txtDonGiaThuoc;
         internal System.Windows.Forms.TextBox txtSoLuongTon;
-        internal System.Windows.Forms.TextBox txtTenDonVi;
         internal System.Windows.Forms.Label lblSoLuongTon;
         internal System.Windows.Forms.GroupBox gbxChiTietPhieuKham;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.ComboBox cbxNhaCungCap;
     }
 }

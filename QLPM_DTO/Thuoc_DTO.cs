@@ -13,7 +13,7 @@ namespace QLPM_DTO
         //Những biến dùng chung
 
         //Bien
-        public string MaThuoc, Tenthuoc, MaDonVi, Soluong, Gia;
+        public string MaThuoc, Tenthuoc, MaDonVi, Soluong, Gia , MaNhaCungCap;
 
 
         public void Insert()
@@ -22,7 +22,7 @@ namespace QLPM_DTO
             DataProvider.connection.Open();
             try
             {
-                string sql = "Insert into dbo.tbl_Thuoc(MaThuoc,Tenthuoc,MaDonVi,Soluong,Gia)" + "values(@MaThuoc,@Tenthuoc,@MaDonVi,@Soluong,@Gia);";
+                string sql = "Insert into dbo.tbl_Thuoc(MaThuoc,Tenthuoc,MaDonVi,Soluong,Gia,MaNhaCungCap)" + "values(@MaThuoc,@Tenthuoc,@MaDonVi,@Soluong,@Gia,@MaNhaCungCap);";
                 SqlCommand cmd = DataProvider.connection.CreateCommand();
                 cmd.CommandText = sql;
 
@@ -30,7 +30,8 @@ namespace QLPM_DTO
                 cmd.Parameters.Add("@Tenthuoc", SqlDbType.NChar).Value = Tenthuoc;
                 cmd.Parameters.Add("@MaDonVi", SqlDbType.NChar).Value = MaDonVi;
                 cmd.Parameters.Add("@Soluong", SqlDbType.NChar).Value = Soluong;
-                cmd.Parameters.Add("@Gia", SqlDbType.NChar).Value = Gia;
+                cmd.Parameters.Add("@Gia", SqlDbType.NChar).Value = Gia; 
+                cmd.Parameters.Add("@MaNhaCungCap", SqlDbType.NChar).Value = MaNhaCungCap;
                 int rowCount = cmd.ExecuteNonQuery();
             }
 
@@ -79,7 +80,7 @@ namespace QLPM_DTO
             DataProvider.connection.Open();
             try
             {
-                string sql = "Update  tbl_Thuoc  set  Tenthuoc = '" + Tenthuoc + "', MaDonVi = '" + MaDonVi + "', Gia = '" + Gia + "', Soluong = '" + Soluong + "'  where MaThuoc = '" + MaThuoc + "'";
+                string sql = "Update  tbl_Thuoc  set MaNhaCungCap ='"+ MaNhaCungCap + "', Tenthuoc = '" + Tenthuoc + "', MaDonVi = '" + MaDonVi + "', Gia = '" + Gia + "', Soluong = '" + Soluong + "'  where MaThuoc = '" + MaThuoc + "'";
                 SqlCommand cmd = DataProvider.connection.CreateCommand();
                 cmd.CommandText = sql;
                 int rowCount = cmd.ExecuteNonQuery();

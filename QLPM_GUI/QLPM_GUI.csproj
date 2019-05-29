@@ -52,6 +52,18 @@
     <Compile Include="FrmBenhNhan_GUI.Designer.cs">
       <DependentUpon>FrmBenhNhan_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChiTietHoaDon_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChiTietHoaDon_GUI.Designer.cs">
+      <DependentUpon>FrmChiTietHoaDon_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoaDon_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDon_GUI.Designer.cs">
+      <DependentUpon>FrmHoaDon_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNhanSu_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,18 +75,6 @@
     </Compile>
     <Compile Include="FrmPhieuKham_GUI.Designer.cs">
       <DependentUpon>FrmPhieuKham_GUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTaoTaiKhoan_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTaoTaiKhoan_GUI.Designer.cs">
-      <DependentUpon>FrmTaoTaiKhoan_GUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTaoTK_GUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTaoTK_GUI.Designer.cs">
-      <DependentUpon>FrmTaoTK_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThuoc_GUI.cs">
       <SubType>Form</SubType>
@@ -93,17 +93,17 @@
     <EmbeddedResource Include="FrmBenhNhan_GUI.resx">
       <DependentUpon>FrmBenhNhan_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmChiTietHoaDon_GUI.resx">
+      <DependentUpon>FrmChiTietHoaDon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDon_GUI.resx">
+      <DependentUpon>FrmHoaDon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNhanSu_GUI.resx">
       <DependentUpon>FrmNhanSu_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPhieuKham_GUI.resx">
       <DependentUpon>FrmPhieuKham_GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTaoTaiKhoan_GUI.resx">
-      <DependentUpon>FrmTaoTaiKhoan_GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTaoTK_GUI.resx">
-      <DependentUpon>FrmTaoTK_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThuoc_GUI.resx">
       <DependentUpon>FrmThuoc_GUI.cs</DependentUpon>

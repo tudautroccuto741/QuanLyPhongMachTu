@@ -51,20 +51,23 @@ using System.Windows.Forms;
                             if (String.Compare(vaitro.Trim(), "...Admin...") == 0)
                             {
 
-                               
 
-                                FrmTaoTK_GUI FrmTaoTaiKhoan = new FrmTaoTK_GUI();
-                                FrmTaoTaiKhoan.Show();
+
+                                 FrmHoaDon_GUI FrmHoaDon = new FrmHoaDon_GUI();                               
+                                 FrmHoaDon.Show();
 
                             }
                             if (String.Compare(vaitro.Trim(), "...NhanVien...") == 0)
                             {
                                 // FrmBenhNhan_GUI FrmNhanVien = new FrmBenhNhan_GUI();
                                 //FrmNhanVien.Show();
-                               // FrmToaThuoc_GUI FrmToaThuoc = new FrmToaThuoc_GUI();
-                              //  FrmToaThuoc.Show();
+                                // FrmToaThuoc_GUI FrmToaThuoc = new FrmToaThuoc_GUI();
+                                //  FrmToaThuoc.Show();
                                 FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
                                 FrmThuoc.Show();
+                               
+                             //   FrmChiTietHoaDon_GUI FrmChiTietHD = new FrmChiTietHoaDon_GUI();
+                           //     FrmChiTietHD.Show();
                             }
 
                             if (String.Compare(vaitro.Trim(), "...BacSi...") == 0)

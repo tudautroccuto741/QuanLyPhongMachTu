@@ -20,10 +20,11 @@ namespace QLPM_GUI
         DataTable table_Thuoc= new DataTable();
         DataTable table_ChiTiet = new DataTable();
         DataTable table_DonVi = new DataTable();
+        DataTable table_NhaCungCap = new DataTable();
         DataRow row;
-        DataRow row_thuoc,row_dv;
-        string madonvi;
-        int index, indexdv ;
+        DataRow row_thuoc,row_dv , row_ncc;
+        string madonvi, manhacungcap;
+        int index, indexdv , indexncc;
         public FrmThuoc_GUI()
         {
             InitializeComponent();
@@ -34,10 +35,16 @@ namespace QLPM_GUI
 
             txtMaThuoc.Text = DataProvider.Auto_Create_MaThuoc();
             table_Thuoc = DataProvider.LoadCSDL("select * from tbl_Thuoc");
-            table_DonVi = DataProvider.LoadCSDL("select * from tbl_DonVi");
+            table_DonVi = DataProvider.LoadCSDL("Select * from tbl_DonVi");
+            table_NhaCungCap = DataProvider.LoadCSDL("select * from tbl_NhaCungCap");
+
             cbxDonVi.DataSource = table_DonVi;
             cbxDonVi.DisplayMember = "Tendonvi";
             cbxDonVi.Enabled = true;
+
+            cbxNhaCungCap.DataSource = table_NhaCungCap;
+            cbxNhaCungCap.DisplayMember = "Tennhacungcap";
+            cbxNhaCungCap.Enabled = true;
 
             Tao_DGV();
             HienThi();
@@ -55,11 +62,13 @@ namespace QLPM_GUI
             DataColumn _mathuoc = new DataColumn("MaThuoc");
             DataColumn _gia = new DataColumn("Gia");
             DataColumn _madonvi = new DataColumn("MaDonVi");
+            DataColumn _manhacungcap = new DataColumn("MaNhaCungCap");
             table_ChiTiet.Columns.Add(_mathuoc);
             table_ChiTiet.Columns.Add(_tenthuoc);
             table_ChiTiet.Columns.Add(_madonvi);
             table_ChiTiet.Columns.Add(_soluong);
-            table_ChiTiet.Columns.Add(_gia);
+            table_ChiTiet.Columns.Add(_gia); 
+            table_ChiTiet.Columns.Add(_manhacungcap);
             table_Thuoc = DataProvider.LoadCSDL("Select * from tbl_Thuoc");
             table_ChiTiet = table_Thuoc;
             dgvThuoc.DataSource = table_ChiTiet;
@@ -73,7 +82,7 @@ namespace QLPM_GUI
             dgvThuoc.Columns["MaDonVi"].HeaderText = "Mã Đơn Vị";
             dgvThuoc.Columns["Soluong"].HeaderText = "Số Lượng";
             dgvThuoc.Columns["Gia"].HeaderText = "Giá";
-
+            dgvThuoc.Columns["MaNhaCungCap"].HeaderText = "Mã Nhà Cung Cấp";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -100,6 +109,7 @@ namespace QLPM_GUI
                     th_DTO.MaDonVi = madonvi;
                     th_DTO.Soluong = txtSoLuongTon.Text;
                     th_DTO.Gia = txtDonGiaThuoc.Text;
+                    th_DTO.MaNhaCungCap = manhacungcap;
                     th_BUS.NhapThongTinThuocMoi(th_DTO);
 
                     FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
@@ -140,7 +150,7 @@ namespace QLPM_GUI
             {
                 int blresult;
                 blresult = 0;
-                blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thêm phiếu khám", "Thêm Phiếu Khám", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
+                blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn cập nhật thuốc", "Cập Nhật Thuốc", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
                 //MessageBox.Show(blresult.ToString());
                 if (blresult == 1)
                 {
@@ -153,6 +163,7 @@ namespace QLPM_GUI
                     th_DTO.MaDonVi =  madonvi;
                     th_DTO.Soluong = txtSoLuongTon.Text;
                     th_DTO.Gia = txtDonGiaThuoc.Text;
+                    th_DTO.MaNhaCungCap = manhacungcap;
                     th_BUS.SuaThongTinThuoc(th_DTO);
 
                     FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
@@ -185,9 +196,15 @@ namespace QLPM_GUI
         {
             txtMaThuoc.Text = DataProvider.Auto_Create_MaThuoc();
             txtTenThuoc.Text = " ";
-            txtTenDonVi.Text = " ";
             txtDonGiaThuoc.Text = " ";
             txtSoLuongTon.Text = " ";
+        }
+
+        private void cbxNhaCungCap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexncc = cbxNhaCungCap.SelectedIndex;
+            row_ncc = table_NhaCungCap.Rows[indexncc];
+            manhacungcap = row_ncc["MaNhaCungCap"].ToString();
         }
 
         private void FrmThuoc_GUI_Click(object sender, EventArgs e)
