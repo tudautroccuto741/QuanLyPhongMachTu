@@ -52,9 +52,10 @@ using System.Windows.Forms;
                             {
 
 
-
-                                 FrmHoaDon_GUI FrmHoaDon = new FrmHoaDon_GUI();                               
-                                 FrmHoaDon.Show();
+                              //  FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
+                             //   FrmThuoc.Show();
+                                FrmHoaDon_GUI FrmHoaDon = new FrmHoaDon_GUI();
+                                FrmHoaDon.Show();
 
                             }
                             if (String.Compare(vaitro.Trim(), "...NhanVien...") == 0)
@@ -63,11 +64,11 @@ using System.Windows.Forms;
                                 //FrmNhanVien.Show();
                                 // FrmToaThuoc_GUI FrmToaThuoc = new FrmToaThuoc_GUI();
                                 //  FrmToaThuoc.Show();
-                                FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
-                                FrmThuoc.Show();
+
+
+                                FrmChiTietHoaDon_GUI FrmChiTietHD = new FrmChiTietHoaDon_GUI();
+                                FrmChiTietHD.Show();
                                
-                             //   FrmChiTietHoaDon_GUI FrmChiTietHD = new FrmChiTietHoaDon_GUI();
-                           //     FrmChiTietHD.Show();
                             }
 
                             if (String.Compare(vaitro.Trim(), "...BacSi...") == 0)

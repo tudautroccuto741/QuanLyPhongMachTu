@@ -144,10 +144,8 @@ namespace QLPM_GUI
             row_tienthuoc = table_TienThuoc.Rows[0];
             strtienthuoc = row_tienthuoc["Gia"].ToString();
             txtTienThuoc.Text = strtienthuoc;
-           // tienthuoc = Convert.ToInt32(strtienthuoc);
 
-
-
+           
 
 
         }
@@ -159,11 +157,14 @@ namespace QLPM_GUI
          
                 int blresult;
                 blresult = 0;
+                tienthuoc = Int32.Parse(strtienthuoc);
+            //  string tong = (txtTienKham.Text + txtTienThuoc.Text).ToString();
+            tongtien = tienthuoc + tienkham;
                 blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thêm thuốc vào toa thuốc", "Thêm Toa Thuốc", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
 
             //MessageBox.Show(blresult.ToString());
             //Tổng tiền
-                   tongtien = tienthuoc + tienkham;
+
         
                 if (blresult == 1)
                 {
