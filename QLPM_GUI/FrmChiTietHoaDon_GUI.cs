@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace QLPM_GUI
 
         DataRow row, row_phieukham, row_LoginUser, row_ThamSo, row_tienthuoc;
         DataRow row_benhnhan, row_thuoc, row_donvi, row_cachdung, row_benh, row_important;
-
+        public string _username = "";
 
         int indexbn;
         string mabenhnhan,maphieukham,strtienkham,strtienthuoc,strtongtien;
@@ -40,14 +41,42 @@ namespace QLPM_GUI
         }
 
         private void FrmChiTietHoaDon_GUI_Load(object sender, EventArgs e)
-        {        
+        {
             table_Thuoc = DataProvider.LoadCSDL("select * from tbl_Thuoc");
             table_HoaDon = DataProvider.LoadCSDL("SELECT tbl_BenhNhan.MaBenhNhan, tbl_BenhNhan.HotenBN, tbl_BenhNhan.GioitinhBN, tbl_BenhNhan.NamsinhBN, tbl_BenhNhan.DiachiBN, tbl_HoaDon.MaPhieuKham FROM(tbl_HoaDon INNER JOIN tbl_BenhNhan ON tbl_HoaDon.MaBenhNhan = tbl_BenhNhan.MaBenhNhan) ");
             table_BenhNhan = DataProvider.LoadCSDL("select * from tbl_BenhNhan");
-        //    table_PhieuKham = DataProvider.LoadCSDL("select * from tbl_H");
+            //    table_PhieuKham = DataProvider.LoadCSDL("select * from tbl_H");
             cbxBenhNhan.DataSource = table_HoaDon;
             cbxBenhNhan.DisplayMember = "HotenBN";
             cbxBenhNhan.Enabled = true;
+            foreach (KeyValuePair<string, User> entry in FrmLogin_GUI.user)
+            {
+                if (!FrmLogin_GUI.user.ContainsKey(FrmLogin_GUI.username)) { return; }
+                _username = entry.Key;
+
+                DataProvider.connection = new SqlConnection(DataProvider.connection_String);
+                DataProvider.connection.Open();
+                try
+                {
+                    string sql = "Select _vaitro from dbo._User where MaNhanSu = '" + _username + "'";
+                    SqlCommand cmd = new SqlCommand(sql, DataProvider.connection);
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("saI");
+                }
+                finally
+                {
+
+                
+                    txtNhanSu.Text = _username;
+                    DataProvider.connection.Close();
+                    DataProvider.connection.Dispose();
+                    DataProvider.connection = null;
+                }
+            }
         }
 
         private void cbxBenhNhan_SelectedIndexChanged(object sender, EventArgs e)

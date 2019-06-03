@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChiTietHoaDon_GUI));
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.cbxBenhNhan = new System.Windows.Forms.ComboBox();
@@ -51,10 +52,10 @@
             this.lblMaBenhNhan = new System.Windows.Forms.Label();
             this.lblHoTenBenhNhan = new System.Windows.Forms.Label();
             this.lblHoaDon = new System.Windows.Forms.Label();
-            this.picHoaDon = new System.Windows.Forms.PictureBox();
             this.lblMaPhieuKham = new System.Windows.Forms.Label();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.gbxThongTinHoaDon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -130,9 +131,10 @@
             this.gbxThongTinHoaDon.TabIndex = 44;
             this.gbxThongTinHoaDon.TabStop = false;
             this.gbxThongTinHoaDon.Text = " Thông tin chi tiết hóa đơn";
-          // 
+            // 
             // txtNhanSu
             // 
+            this.txtNhanSu.Enabled = false;
             this.txtNhanSu.Location = new System.Drawing.Point(594, 206);
             this.txtNhanSu.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhanSu.Name = "txtNhanSu";
@@ -165,6 +167,7 @@
             // 
             // txtBenh
             // 
+            this.txtBenh.Enabled = false;
             this.txtBenh.Location = new System.Drawing.Point(183, 204);
             this.txtBenh.Margin = new System.Windows.Forms.Padding(4);
             this.txtBenh.Name = "txtBenh";
@@ -185,6 +188,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Enabled = false;
             this.txtTongTien.Location = new System.Drawing.Point(409, 272);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTongTien.Name = "txtTongTien";
@@ -205,6 +209,7 @@
             // 
             // txtNgayKham
             // 
+            this.txtNgayKham.Enabled = false;
             this.txtNgayKham.Location = new System.Drawing.Point(183, 90);
             this.txtNgayKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgayKham.Name = "txtNgayKham";
@@ -213,6 +218,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(183, 148);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
@@ -233,6 +239,7 @@
             // 
             // txtNamSinh
             // 
+            this.txtNamSinh.Enabled = false;
             this.txtNamSinh.Location = new System.Drawing.Point(594, 90);
             this.txtNamSinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamSinh.Name = "txtNamSinh";
@@ -242,6 +249,7 @@
             // txtMaBenhNhan
             // 
             this.txtMaBenhNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaBenhNhan.Enabled = false;
             this.txtMaBenhNhan.Location = new System.Drawing.Point(183, 42);
             this.txtMaBenhNhan.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaBenhNhan.Name = "txtMaBenhNhan";
@@ -250,6 +258,7 @@
             // 
             // txtMaPhieuKham
             // 
+            this.txtMaPhieuKham.Enabled = false;
             this.txtMaPhieuKham.Location = new System.Drawing.Point(594, 43);
             this.txtMaPhieuKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhieuKham.Name = "txtMaPhieuKham";
@@ -258,6 +267,7 @@
             // 
             // txtGioiTinh
             // 
+            this.txtGioiTinh.Enabled = false;
             this.txtGioiTinh.Location = new System.Drawing.Point(594, 149);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtGioiTinh.Name = "txtGioiTinh";
@@ -317,22 +327,12 @@
             this.lblHoaDon.AutoSize = true;
             this.lblHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoaDon.ForeColor = System.Drawing.Color.Red;
-            this.lblHoaDon.Location = new System.Drawing.Point(394, 42);
+            this.lblHoaDon.Location = new System.Drawing.Point(447, 42);
             this.lblHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoaDon.Name = "lblHoaDon";
             this.lblHoaDon.Size = new System.Drawing.Size(222, 31);
             this.lblHoaDon.TabIndex = 43;
             this.lblHoaDon.Text = "Chi Tiết Hóa Đơn";
-            // 
-            // picHoaDon
-            // 
-            this.picHoaDon.Location = new System.Drawing.Point(303, 27);
-            this.picHoaDon.Margin = new System.Windows.Forms.Padding(4);
-            this.picHoaDon.Name = "picHoaDon";
-            this.picHoaDon.Size = new System.Drawing.Size(73, 68);
-            this.picHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHoaDon.TabIndex = 42;
-            this.picHoaDon.TabStop = false;
             // 
             // lblMaPhieuKham
             // 
@@ -346,24 +346,37 @@
             this.lblMaPhieuKham.TabIndex = 41;
             this.lblMaPhieuKham.Text = "Tên bệnh nhân";
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
+            this.pictureBox20.Location = new System.Drawing.Point(284, 26);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(101, 74);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 48;
+            this.pictureBox20.TabStop = false;
+            // 
             // FrmChiTietHoaDon_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(997, 586);
+            this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.cbxBenhNhan);
             this.Controls.Add(this.gbxThongTinHoaDon);
             this.Controls.Add(this.lblHoaDon);
-            this.Controls.Add(this.picHoaDon);
             this.Controls.Add(this.lblMaPhieuKham);
             this.Name = "FrmChiTietHoaDon_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChiTietHoaDon_GUI";
             this.Load += new System.EventHandler(this.FrmChiTietHoaDon_GUI_Load);
             this.gbxThongTinHoaDon.ResumeLayout(false);
             this.gbxThongTinHoaDon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,11 +403,11 @@
         internal System.Windows.Forms.Label lblMaBenhNhan;
         internal System.Windows.Forms.Label lblHoTenBenhNhan;
         internal System.Windows.Forms.Label lblHoaDon;
-        internal System.Windows.Forms.PictureBox picHoaDon;
         internal System.Windows.Forms.Label lblMaPhieuKham;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtBenh;
         internal System.Windows.Forms.TextBox txtNhanSu;
         internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.PictureBox pictureBox20;
     }
 }

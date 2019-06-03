@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhanSu_GUI));
             this.lblThongTinBenhNhan = new System.Windows.Forms.Label();
             this.picHoaDon = new System.Windows.Forms.PictureBox();
             this.txtNamSinh = new System.Windows.Forms.TextBox();
@@ -43,13 +44,12 @@
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.lblNgayKham = new System.Windows.Forms.Label();
             this.lblMaBacSi = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvDSNS = new System.Windows.Forms.DataGridView();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.gbxThongTinBenhNhan = new System.Windows.Forms.GroupBox();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.cbxVaiTro = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNS)).BeginInit();
             this.gbxThongTinBenhNhan.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             this.lblThongTinBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongTinBenhNhan.ForeColor = System.Drawing.Color.Red;
-            this.lblThongTinBenhNhan.Location = new System.Drawing.Point(557, 33);
+            this.lblThongTinBenhNhan.Location = new System.Drawing.Point(574, 31);
             this.lblThongTinBenhNhan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThongTinBenhNhan.Name = "lblThongTinBenhNhan";
             this.lblThongTinBenhNhan.Size = new System.Drawing.Size(304, 36);
@@ -68,7 +68,8 @@
             // 
             // picHoaDon
             // 
-            this.picHoaDon.Location = new System.Drawing.Point(396, 12);
+            this.picHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("picHoaDon.Image")));
+            this.picHoaDon.Location = new System.Drawing.Point(483, 13);
             this.picHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.picHoaDon.Name = "picHoaDon";
             this.picHoaDon.Size = new System.Drawing.Size(73, 68);
@@ -234,21 +235,6 @@
             this.lblMaBacSi.TabIndex = 0;
             this.lblMaBacSi.Text = "Mã nhân sự";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(423, 444);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 49);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // dgvDSNS
             // 
             this.dgvDSNS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -302,6 +288,30 @@
             this.gbxThongTinBenhNhan.TabStop = false;
             this.gbxThongTinBenhNhan.Text = "Thông tin bác sĩ";
             // 
+            // cbxVaiTro
+            // 
+            this.cbxVaiTro.FormattingEnabled = true;
+            this.cbxVaiTro.Items.AddRange(new object[] {
+            "Bác sĩ",
+            "Nhân viên",
+            "Admin"});
+            this.cbxVaiTro.Location = new System.Drawing.Point(203, 306);
+            this.cbxVaiTro.Name = "cbxVaiTro";
+            this.cbxVaiTro.Size = new System.Drawing.Size(181, 26);
+            this.cbxVaiTro.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(5, 308);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Vai Trò";
+            // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.DodgerBlue;
@@ -318,45 +328,22 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(5, 308);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 24);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Vai Trò";
-            // 
-            // cbxVaiTro
-            // 
-            this.cbxVaiTro.FormattingEnabled = true;
-            this.cbxVaiTro.Items.AddRange(new object[] {
-            "Bác sĩ",
-            "Nhân viên",
-            "Admin"});
-            this.cbxVaiTro.Location = new System.Drawing.Point(203, 306);
-            this.cbxVaiTro.Name = "cbxVaiTro";
-            this.cbxVaiTro.Size = new System.Drawing.Size(181, 26);
-            this.cbxVaiTro.TabIndex = 30;
-            // 
             // FrmNhanSu_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1275, 607);
             this.Controls.Add(this.lblThongTinBenhNhan);
             this.Controls.Add(this.picHoaDon);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvDSNS);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.gbxThongTinBenhNhan);
             this.Controls.Add(this.btnHuy);
             this.Name = "FrmNhanSu_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNhanSu_GUI";
             this.Load += new System.EventHandler(this.FrmNhanSu_GUI_Load);
             this.Click += new System.EventHandler(this.FrmNhanSu_GUI_Click);
@@ -385,7 +372,6 @@
         internal System.Windows.Forms.Label lblGioiTinh;
         internal System.Windows.Forms.Label lblNgayKham;
         internal System.Windows.Forms.Label lblMaBacSi;
-        internal System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvDSNS;
         internal System.Windows.Forms.Button btnCapNhat;
         internal System.Windows.Forms.GroupBox gbxThongTinBenhNhan;

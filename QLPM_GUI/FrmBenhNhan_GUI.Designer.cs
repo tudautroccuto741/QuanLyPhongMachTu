@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBenhNhan_GUI));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.gbxThongTinBenhNhan = new System.Windows.Forms.GroupBox();
@@ -51,8 +52,10 @@
             this.dgvDSBN = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.lblThongTinBenhNhan = new System.Windows.Forms.Label();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbxThongTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSBN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXoa
@@ -345,18 +348,31 @@
             // 
             this.lblThongTinBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongTinBenhNhan.ForeColor = System.Drawing.Color.Red;
-            this.lblThongTinBenhNhan.Location = new System.Drawing.Point(440, 23);
+            this.lblThongTinBenhNhan.Location = new System.Drawing.Point(540, 45);
             this.lblThongTinBenhNhan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThongTinBenhNhan.Name = "lblThongTinBenhNhan";
             this.lblThongTinBenhNhan.Size = new System.Drawing.Size(304, 36);
             this.lblThongTinBenhNhan.TabIndex = 52;
             this.lblThongTinBenhNhan.Text = "Thông tin bệnh nhân\n";
             // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
+            this.PictureBox2.Location = new System.Drawing.Point(440, 22);
+            this.PictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(82, 76);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 59;
+            this.PictureBox2.TabStop = false;
+            // 
             // FrmBenhNhan_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1271, 651);
+            this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.gbxThongTinBenhNhan);
@@ -365,12 +381,14 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblThongTinBenhNhan);
             this.Name = "FrmBenhNhan_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBenhNhan_GUI";
             this.Load += new System.EventHandler(this.FrmBenhNhan_GUI_Load);
             this.Click += new System.EventHandler(this.FrmBenhNhan_GUI_Click);
             this.gbxThongTinBenhNhan.ResumeLayout(false);
             this.gbxThongTinBenhNhan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSBN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +418,6 @@
         private System.Windows.Forms.DataGridView dgvDSBN;
         internal System.Windows.Forms.Button btnThem;
         internal System.Windows.Forms.Label lblThongTinBenhNhan;
+        internal System.Windows.Forms.PictureBox PictureBox2;
     }
 }

@@ -178,6 +178,7 @@ namespace QLPM_GUI
             Close();
         }
 
+
         private void dgvThuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHoaDon_GUI));
             this.checkCoDungThuoc = new System.Windows.Forms.CheckBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.cbxPhieuKham = new System.Windows.Forms.ComboBox();
-            this.lblMaHoaDon = new System.Windows.Forms.Label();
             this.gbxThongTinHoaDon = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNgayKham = new System.Windows.Forms.TextBox();
@@ -48,12 +48,12 @@
             this.lblHoTenBenhNhan = new System.Windows.Forms.Label();
             this.lblMaPhieuKham = new System.Windows.Forms.Label();
             this.lblHoaDon = new System.Windows.Forms.Label();
-            this.picHoaDon = new System.Windows.Forms.PictureBox();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.BtnXoa = new System.Windows.Forms.Button();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.gbxThongTinHoaDon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // checkCoDungThuoc
@@ -94,7 +94,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(13, 482);
+            this.btnThem.Location = new System.Drawing.Point(47, 482);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 49);
@@ -114,19 +114,6 @@
             this.cbxPhieuKham.Size = new System.Drawing.Size(203, 24);
             this.cbxPhieuKham.TabIndex = 16;
             this.cbxPhieuKham.SelectedIndexChanged += new System.EventHandler(this.cbxPhieuKham_SelectedIndexChanged);
-            // 
-            // lblMaHoaDon
-            // 
-            this.lblMaHoaDon.AutoSize = true;
-            this.lblMaHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaHoaDon.ForeColor = System.Drawing.Color.Navy;
-            this.lblMaHoaDon.Location = new System.Drawing.Point(925, 51);
-            this.lblMaHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMaHoaDon.Name = "lblMaHoaDon";
-            this.lblMaHoaDon.Size = new System.Drawing.Size(112, 24);
-            this.lblMaHoaDon.TabIndex = 15;
-            this.lblMaHoaDon.Text = "Mã hóa đơn";
             // 
             // gbxThongTinHoaDon
             // 
@@ -168,6 +155,7 @@
             // 
             // txtNgayKham
             // 
+            this.txtNgayKham.Enabled = false;
             this.txtNgayKham.Location = new System.Drawing.Point(594, 41);
             this.txtNgayKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgayKham.Name = "txtNgayKham";
@@ -176,6 +164,7 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(183, 148);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
@@ -196,6 +185,7 @@
             // 
             // txtTienThuoc
             // 
+            this.txtTienThuoc.Enabled = false;
             this.txtTienThuoc.Location = new System.Drawing.Point(594, 90);
             this.txtTienThuoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtTienThuoc.Name = "txtTienThuoc";
@@ -205,6 +195,7 @@
             // txtMaBenhNhan
             // 
             this.txtMaBenhNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaBenhNhan.Enabled = false;
             this.txtMaBenhNhan.Location = new System.Drawing.Point(183, 42);
             this.txtMaBenhNhan.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaBenhNhan.Name = "txtMaBenhNhan";
@@ -213,6 +204,7 @@
             // 
             // txtHoVaTen
             // 
+            this.txtHoVaTen.Enabled = false;
             this.txtHoVaTen.Location = new System.Drawing.Point(183, 90);
             this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoVaTen.Name = "txtHoVaTen";
@@ -221,6 +213,7 @@
             // 
             // txtTienKham
             // 
+            this.txtTienKham.Enabled = false;
             this.txtTienKham.Location = new System.Drawing.Point(594, 149);
             this.txtTienKham.Margin = new System.Windows.Forms.Padding(4);
             this.txtTienKham.Name = "txtTienKham";
@@ -292,22 +285,12 @@
             this.lblHoaDon.AutoSize = true;
             this.lblHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoaDon.ForeColor = System.Drawing.Color.Red;
-            this.lblHoaDon.Location = new System.Drawing.Point(315, 44);
+            this.lblHoaDon.Location = new System.Drawing.Point(584, 60);
             this.lblHoaDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoaDon.Name = "lblHoaDon";
             this.lblHoaDon.Size = new System.Drawing.Size(251, 31);
             this.lblHoaDon.TabIndex = 13;
             this.lblHoaDon.Text = "Hóa đơn thanh toán\r\n";
-            // 
-            // picHoaDon
-            // 
-            this.picHoaDon.Location = new System.Drawing.Point(224, 29);
-            this.picHoaDon.Margin = new System.Windows.Forms.Padding(4);
-            this.picHoaDon.Name = "picHoaDon";
-            this.picHoaDon.Size = new System.Drawing.Size(73, 68);
-            this.picHoaDon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picHoaDon.TabIndex = 12;
-            this.picHoaDon.TabStop = false;
             // 
             // dgvHoaDon
             // 
@@ -326,7 +309,7 @@
             this.BtnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnXoa.ForeColor = System.Drawing.Color.White;
-            this.BtnXoa.Location = new System.Drawing.Point(179, 482);
+            this.BtnXoa.Location = new System.Drawing.Point(291, 482);
             this.BtnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.BtnXoa.Name = "BtnXoa";
             this.BtnXoa.Size = new System.Drawing.Size(108, 49);
@@ -335,30 +318,42 @@
             this.BtnXoa.UseVisualStyleBackColor = false;
             this.BtnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
+            // PictureBox4
+            // 
+            this.PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox4.Image")));
+            this.PictureBox4.Location = new System.Drawing.Point(468, 30);
+            this.PictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(85, 72);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox4.TabIndex = 41;
+            this.PictureBox4.TabStop = false;
+            // 
             // FrmHoaDon_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1291, 582);
+            this.Controls.Add(this.PictureBox4);
             this.Controls.Add(this.BtnXoa);
             this.Controls.Add(this.dgvHoaDon);
             this.Controls.Add(this.checkCoDungThuoc);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.cbxPhieuKham);
-            this.Controls.Add(this.lblMaHoaDon);
             this.Controls.Add(this.gbxThongTinHoaDon);
             this.Controls.Add(this.lblHoaDon);
-            this.Controls.Add(this.picHoaDon);
             this.Controls.Add(this.lblMaPhieuKham);
             this.Name = "FrmHoaDon_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHoaDon_GUI";
             this.Load += new System.EventHandler(this.FrmHoaDon_GUI_Load);
             this.Click += new System.EventHandler(this.FrmHoaDon_GUI_Click);
             this.gbxThongTinHoaDon.ResumeLayout(false);
             this.gbxThongTinHoaDon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +365,6 @@
         internal System.Windows.Forms.Button btnHuy;
         internal System.Windows.Forms.Button btnThem;
         internal System.Windows.Forms.ComboBox cbxPhieuKham;
-        internal System.Windows.Forms.Label lblMaHoaDon;
         internal System.Windows.Forms.GroupBox gbxThongTinHoaDon;
         internal System.Windows.Forms.TextBox txtTienThuoc;
         internal System.Windows.Forms.TextBox txtMaBenhNhan;
@@ -382,12 +376,12 @@
         internal System.Windows.Forms.Label lblHoTenBenhNhan;
         internal System.Windows.Forms.Label lblMaPhieuKham;
         internal System.Windows.Forms.Label lblHoaDon;
-        internal System.Windows.Forms.PictureBox picHoaDon;
         internal System.Windows.Forms.TextBox txtDiaChi;
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.DataGridView dgvHoaDon;
         internal System.Windows.Forms.Button BtnXoa;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox txtNgayKham;
+        internal System.Windows.Forms.PictureBox PictureBox4;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmToaThuoc_GUI));
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -58,8 +59,10 @@
             this.gbxChiTietPhieuKham = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTenBacSi = new System.Windows.Forms.TextBox();
+            this.PictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).BeginInit();
             this.gbxChiTietPhieuKham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -69,7 +72,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(1112, 336);
+            this.btnHuy.Location = new System.Drawing.Point(1126, 347);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(133, 43);
@@ -85,7 +88,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(1112, 203);
+            this.btnXoa.Location = new System.Drawing.Point(1126, 214);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(133, 43);
@@ -101,7 +104,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(1112, 141);
+            this.btnThem.Location = new System.Drawing.Point(1126, 152);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(133, 43);
@@ -139,7 +142,7 @@
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(1112, 271);
+            this.btnCapNhat.Location = new System.Drawing.Point(1126, 282);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(133, 43);
@@ -435,11 +438,24 @@
             this.txtTenBacSi.TabIndex = 54;
             this.txtTenBacSi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // PictureBox5
+            // 
+            this.PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox5.Image")));
+            this.PictureBox5.Location = new System.Drawing.Point(448, 13);
+            this.PictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox5.Name = "PictureBox5";
+            this.PictureBox5.Size = new System.Drawing.Size(70, 75);
+            this.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox5.TabIndex = 45;
+            this.PictureBox5.TabStop = false;
+            // 
             // FrmToaThuoc_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 581);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(1272, 704);
+            this.Controls.Add(this.PictureBox5);
             this.Controls.Add(this.cbxPhieuKham);
             this.Controls.Add(this.gbxChiTietPhieuKham);
             this.Controls.Add(this.btnHuy);
@@ -451,11 +467,13 @@
             this.Controls.Add(this.lblMaThuoc);
             this.Controls.Add(this.lblChiTietPhieuKham);
             this.Name = "FrmToaThuoc_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmToaThuoc_GUI";
             this.Load += new System.EventHandler(this.FrmToaThuoc_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).EndInit();
             this.gbxChiTietPhieuKham.ResumeLayout(false);
             this.gbxChiTietPhieuKham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,5 +510,6 @@
         internal System.Windows.Forms.GroupBox gbxChiTietPhieuKham;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.TextBox txtTenBacSi;
+        internal System.Windows.Forms.PictureBox PictureBox5;
     }
 }

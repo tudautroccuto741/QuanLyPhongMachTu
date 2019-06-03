@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPhieuKham_GUI));
             this.dgvPK = new System.Windows.Forms.DataGridView();
-            this.picPhieuKhamBenh = new System.Windows.Forms.PictureBox();
             this.lblTrieuChung = new System.Windows.Forms.Label();
             this.lblMaBenhNhan = new System.Windows.Forms.Label();
             this.lblNgayKham = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.cbxMaBenhNhan = new System.Windows.Forms.ComboBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtTenBenhNhan = new System.Windows.Forms.TextBox();
             this.lblDanhSachPhieuKham = new System.Windows.Forms.Label();
             this.gbxThongTinPhieuKham = new System.Windows.Forms.GroupBox();
             this.txtTuoi = new System.Windows.Forms.TextBox();
@@ -50,9 +49,10 @@
             this.txtNgayKham = new System.Windows.Forms.TextBox();
             this.txtMaPhieuKham = new System.Windows.Forms.TextBox();
             this.lblPhieuKhamBenh = new System.Windows.Forms.Label();
+            this.PictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPhieuKhamBenh)).BeginInit();
             this.gbxThongTinPhieuKham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPK
@@ -64,16 +64,6 @@
             this.dgvPK.Size = new System.Drawing.Size(915, 210);
             this.dgvPK.TabIndex = 27;
             this.dgvPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPK_CellClick);
-            // 
-            // picPhieuKhamBenh
-            // 
-            this.picPhieuKhamBenh.Location = new System.Drawing.Point(456, 14);
-            this.picPhieuKhamBenh.Margin = new System.Windows.Forms.Padding(4);
-            this.picPhieuKhamBenh.Name = "picPhieuKhamBenh";
-            this.picPhieuKhamBenh.Size = new System.Drawing.Size(73, 68);
-            this.picPhieuKhamBenh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPhieuKhamBenh.TabIndex = 20;
-            this.picPhieuKhamBenh.TabStop = false;
             // 
             // lblTrieuChung
             // 
@@ -205,15 +195,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
-            // txtTenBenhNhan
-            // 
-            this.txtTenBenhNhan.Enabled = false;
-            this.txtTenBenhNhan.Location = new System.Drawing.Point(396, 144);
-            this.txtTenBenhNhan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenBenhNhan.Name = "txtTenBenhNhan";
-            this.txtTenBenhNhan.Size = new System.Drawing.Size(187, 24);
-            this.txtTenBenhNhan.TabIndex = 10;
-            // 
             // lblDanhSachPhieuKham
             // 
             this.lblDanhSachPhieuKham.AutoSize = true;
@@ -233,7 +214,6 @@
             this.gbxThongTinPhieuKham.Controls.Add(this.txtGioiTinh);
             this.gbxThongTinPhieuKham.Controls.Add(this.label1);
             this.gbxThongTinPhieuKham.Controls.Add(this.txtNgayKham);
-            this.gbxThongTinPhieuKham.Controls.Add(this.txtTenBenhNhan);
             this.gbxThongTinPhieuKham.Controls.Add(this.txtTrieuChung);
             this.gbxThongTinPhieuKham.Controls.Add(this.cbxMaBenhNhan);
             this.gbxThongTinPhieuKham.Controls.Add(this.txtMaPhieuKham);
@@ -326,13 +306,25 @@
             this.lblPhieuKhamBenh.TabIndex = 21;
             this.lblPhieuKhamBenh.Text = "Phiếu khám bệnh";
             // 
+            // PictureBox10
+            // 
+            this.PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox10.Image")));
+            this.PictureBox10.Location = new System.Drawing.Point(436, 13);
+            this.PictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox10.Name = "PictureBox10";
+            this.PictureBox10.Size = new System.Drawing.Size(93, 74);
+            this.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox10.TabIndex = 29;
+            this.PictureBox10.TabStop = false;
+            // 
             // FrmPhieuKham_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1241, 674);
+            this.Controls.Add(this.PictureBox10);
             this.Controls.Add(this.dgvPK);
-            this.Controls.Add(this.picPhieuKhamBenh);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
@@ -341,13 +333,14 @@
             this.Controls.Add(this.gbxThongTinPhieuKham);
             this.Controls.Add(this.lblPhieuKhamBenh);
             this.Name = "FrmPhieuKham_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPhieuKham_GUI";
             this.Load += new System.EventHandler(this.FrmPhieuKham_GUI_Load);
             this.Click += new System.EventHandler(this.FrmPhieuKham_GUI_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPhieuKhamBenh)).EndInit();
             this.gbxThongTinPhieuKham.ResumeLayout(false);
             this.gbxThongTinPhieuKham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,7 +349,6 @@
         #endregion
 
         internal System.Windows.Forms.DataGridView dgvPK;
-        internal System.Windows.Forms.PictureBox picPhieuKhamBenh;
         internal System.Windows.Forms.Label lblTrieuChung;
         internal System.Windows.Forms.Label lblMaBenhNhan;
         internal System.Windows.Forms.Label lblNgayKham;
@@ -367,7 +359,6 @@
         internal System.Windows.Forms.ComboBox cbxMaBenhNhan;
         internal System.Windows.Forms.Button btnXoa;
         internal System.Windows.Forms.Button btnThem;
-        internal System.Windows.Forms.TextBox txtTenBenhNhan;
         internal System.Windows.Forms.Label lblDanhSachPhieuKham;
         internal System.Windows.Forms.GroupBox gbxThongTinPhieuKham;
         internal System.Windows.Forms.TextBox txtTuoi;
@@ -377,5 +368,6 @@
         internal System.Windows.Forms.TextBox txtNgayKham;
         internal System.Windows.Forms.TextBox txtMaPhieuKham;
         internal System.Windows.Forms.Label lblPhieuKhamBenh;
+        internal System.Windows.Forms.PictureBox PictureBox10;
     }
 }

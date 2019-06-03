@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThuoc_GUI));
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.lblDanhSachThuoc = new System.Windows.Forms.Label();
             this.dgvThuoc = new System.Windows.Forms.DataGridView();
-            this.picThuoc = new System.Windows.Forms.PictureBox();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.txtMaThuoc = new System.Windows.Forms.TextBox();
             this.lblMaThuoc = new System.Windows.Forms.Label();
@@ -46,12 +46,13 @@
             this.txtSoLuongTon = new System.Windows.Forms.TextBox();
             this.lblSoLuongTon = new System.Windows.Forms.Label();
             this.gbxChiTietPhieuKham = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxNhaCungCap = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbxNhaCungCap = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picThuoc)).BeginInit();
             this.gbxChiTietPhieuKham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
@@ -123,16 +124,6 @@
             this.dgvThuoc.Size = new System.Drawing.Size(967, 277);
             this.dgvThuoc.TabIndex = 26;
             this.dgvThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuoc_CellClick);
-            // 
-            // picThuoc
-            // 
-            this.picThuoc.Location = new System.Drawing.Point(434, 11);
-            this.picThuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.picThuoc.Name = "picThuoc";
-            this.picThuoc.Size = new System.Drawing.Size(67, 62);
-            this.picThuoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picThuoc.TabIndex = 22;
-            this.picThuoc.TabStop = false;
             // 
             // btnCapNhat
             // 
@@ -282,28 +273,6 @@
             this.gbxChiTietPhieuKham.TabStop = false;
             this.gbxChiTietPhieuKham.Text = "Thông tin thuốc";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 92);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 24);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Tên Đơn vị";
-            // 
-            // cbxNhaCungCap
-            // 
-            this.cbxNhaCungCap.FormattingEnabled = true;
-            this.cbxNhaCungCap.Location = new System.Drawing.Point(699, 93);
-            this.cbxNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxNhaCungCap.Name = "cbxNhaCungCap";
-            this.cbxNhaCungCap.Size = new System.Drawing.Size(135, 26);
-            this.cbxNhaCungCap.TabIndex = 33;
-            this.cbxNhaCungCap.SelectedIndexChanged += new System.EventHandler(this.cbxNhaCungCap_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -316,30 +285,65 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "Tên Nhà Cung Cấp";
             // 
+            // cbxNhaCungCap
+            // 
+            this.cbxNhaCungCap.FormattingEnabled = true;
+            this.cbxNhaCungCap.Location = new System.Drawing.Point(699, 93);
+            this.cbxNhaCungCap.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxNhaCungCap.Name = "cbxNhaCungCap";
+            this.cbxNhaCungCap.Size = new System.Drawing.Size(135, 26);
+            this.cbxNhaCungCap.TabIndex = 33;
+            this.cbxNhaCungCap.SelectedIndexChanged += new System.EventHandler(this.cbxNhaCungCap_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(8, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Tên Đơn vị";
+            // 
+            // PictureBox11
+            // 
+            this.PictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox11.Image")));
+            this.PictureBox11.Location = new System.Drawing.Point(414, 22);
+            this.PictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox11.Name = "PictureBox11";
+            this.PictureBox11.Size = new System.Drawing.Size(85, 62);
+            this.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox11.TabIndex = 32;
+            this.PictureBox11.TabStop = false;
+            // 
             // FrmThuoc_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1206, 673);
+            this.Controls.Add(this.PictureBox11);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblDanhSachThuoc);
             this.Controls.Add(this.dgvThuoc);
-            this.Controls.Add(this.picThuoc);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.gbxChiTietPhieuKham);
             this.Controls.Add(this.txtMaThuoc);
             this.Controls.Add(this.lblMaThuoc);
             this.Controls.Add(this.lblChiTietPhieuKham);
             this.Name = "FrmThuoc_GUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmThuoc_GUI";
             this.Load += new System.EventHandler(this.FrmThuoc_GUI_Load);
             this.Click += new System.EventHandler(this.FrmThuoc_GUI_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picThuoc)).EndInit();
             this.gbxChiTietPhieuKham.ResumeLayout(false);
             this.gbxChiTietPhieuKham.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,7 +356,6 @@
         internal System.Windows.Forms.Button btnThem;
         internal System.Windows.Forms.Label lblDanhSachThuoc;
         internal System.Windows.Forms.DataGridView dgvThuoc;
-        internal System.Windows.Forms.PictureBox picThuoc;
         internal System.Windows.Forms.Button btnCapNhat;
         internal System.Windows.Forms.TextBox txtMaThuoc;
         internal System.Windows.Forms.Label lblMaThuoc;
@@ -368,5 +371,6 @@
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.ComboBox cbxNhaCungCap;
+        internal System.Windows.Forms.PictureBox PictureBox11;
     }
 }

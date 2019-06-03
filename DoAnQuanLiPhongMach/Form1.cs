@@ -25,84 +25,35 @@ using System.Windows.Forms;
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtLogin.Text.Trim().Equals("") || txtPass.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Loi");
-
-            }
-            else
-            {
-                DataProvider.connection = new SqlConnection(DataProvider.connection_String);
-                DataProvider.connection.Open();
-                try
-                {
-                    string sql = "Select _vaitro from dbo._User where MaNhanSu = @MaNhanSu and _matkhau = @_matkhau;";
-                    SqlCommand cmd = new SqlCommand(sql, DataProvider.connection);
-                    cmd.Parameters.Add("@MaNhanSu", SqlDbType.NChar).Value = txtLogin.Text;
-                    cmd.Parameters.Add("@_matkhau", SqlDbType.NChar).Value = txtPass.Text;
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string vaitro = reader.GetString(0);
-                            _LoginUser = txtLogin.Text.Trim();
-
-
-                            if (String.Compare(vaitro.Trim(), "...Admin...") == 0)
-                            {
-
-
-                              //  FrmThuoc_GUI FrmThuoc = new FrmThuoc_GUI();
-                             //   FrmThuoc.Show();
-                                FrmHoaDon_GUI FrmHoaDon = new FrmHoaDon_GUI();
-                                FrmHoaDon.Show();
-
-                            }
-                            if (String.Compare(vaitro.Trim(), "...NhanVien...") == 0)
-                            {
-                                // FrmBenhNhan_GUI FrmNhanVien = new FrmBenhNhan_GUI();
-                                //FrmNhanVien.Show();
-                                // FrmToaThuoc_GUI FrmToaThuoc = new FrmToaThuoc_GUI();
-                                //  FrmToaThuoc.Show();
-
-
-                                FrmChiTietHoaDon_GUI FrmChiTietHD = new FrmChiTietHoaDon_GUI();
-                                FrmChiTietHD.Show();
-                               
-                            }
-
-                            if (String.Compare(vaitro.Trim(), "...BacSi...") == 0)
-                            {
-                                //  FrmBacSi_GUI FrmBacSi = new FrmBacSi_GUI();
-                                //  FrmBacSi.Show();
-                                //  FrmPhieuKham_GUI FrmPhieuKham = new FrmPhieuKham_GUI();
-                                //  FrmPhieuKham.Show();
-                                FrmToaThuoc_GUI FrmToaThuoc = new FrmToaThuoc_GUI();
-                                FrmToaThuoc.Show();
-                            }
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Loi");
-                        }
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Loi Catch");
-                }
-                finally
-                {
-                    this.txtLogin.Text = "";
-                    this.txtPass.Text = "";
-                    DataProvider.connection.Close();
-                    DataProvider.connection.Dispose();
-                }
-
-            }
+           
         }
 
-  
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn phải đăng nhập trước!!!!!");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLogin_GUI FrmLogin = new FrmLogin_GUI();
+            FrmLogin.Show();
+        }
+
+
     }
 }

@@ -72,8 +72,7 @@ namespace QLPM_GUI
             txtMaPhieuKham.Text = DataProvider.Auto_Create_MaPK();
             table_PhieuKham = DataProvider.LoadCSDL("select * from tbl_PhieuKham");
             table_BenhNhan = DataProvider.LoadCSDL("select * from tbl_BenhNhan");
-            table_NhanVien = DataProvider.LoadCSDL("select * from tbl_NhanVien");
-            //      table_NgayKham = DataProvider.LoadCSDL("SELECT tbl_BenhNhan.Ngaykham FROM(tbl_PhieuKham INNER JOIN tbl_BenhNhan ON tbl_PhieuKham.MaBenhNhan = tbl_BenhNhan.MaBenhNhan) WHERE(((Tbl_PhieuKham.MaBenhNhan) = '"+cbxMaBenhNhan.Text+"'))");
+        //      table_NgayKham = DataProvider.LoadCSDL("SELECT tbl_BenhNhan.Ngaykham FROM(tbl_PhieuKham INNER JOIN tbl_BenhNhan ON tbl_PhieuKham.MaBenhNhan = tbl_BenhNhan.MaBenhNhan) WHERE(((Tbl_PhieuKham.MaBenhNhan) = '"+cbxMaBenhNhan.Text+"'))");
             table_NgayKham = DataProvider.LoadCSDL("select Ngaykham from tbl_BenhNhan where MaBenhNhan ='" + cbxMaBenhNhan.Text + "'");
             cbxMaBenhNhan.DataSource = table_BenhNhan;
             cbxMaBenhNhan.DisplayMember = "HotenBN";
