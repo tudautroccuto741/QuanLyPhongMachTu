@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTenChuyenMon = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.dtpNamSinh = new System.Windows.Forms.DateTimePicker();
             this.RadioButton2 = new System.Windows.Forms.RadioButton();
             this.RadioButton1 = new System.Windows.Forms.RadioButton();
             this.txtHoTenBenhNhan = new System.Windows.Forms.TextBox();
@@ -98,7 +97,6 @@
             this.gbxThongTinBenhNhan.Controls.Add(this.label1);
             this.gbxThongTinBenhNhan.Controls.Add(this.lblTenChuyenMon);
             this.gbxThongTinBenhNhan.Controls.Add(this.txtDiaChi);
-            this.gbxThongTinBenhNhan.Controls.Add(this.dtpNamSinh);
             this.gbxThongTinBenhNhan.Controls.Add(this.RadioButton2);
             this.gbxThongTinBenhNhan.Controls.Add(this.RadioButton1);
             this.gbxThongTinBenhNhan.Controls.Add(this.txtHoTenBenhNhan);
@@ -129,7 +127,7 @@
             this.dtpNgayKham.Name = "dtpNgayKham";
             this.dtpNgayKham.Size = new System.Drawing.Size(183, 24);
             this.dtpNgayKham.TabIndex = 29;
-            this.dtpNgayKham.Value = new System.DateTime(2018, 6, 27, 0, 0, 0, 0);
+            this.dtpNgayKham.Value = new System.DateTime(2019, 6, 4, 0, 0, 0, 0);
             // 
             // txtNamSinh
             // 
@@ -182,17 +180,6 @@
             this.txtDiaChi.Size = new System.Drawing.Size(280, 24);
             this.txtDiaChi.TabIndex = 21;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dtpNamSinh
-            // 
-            this.dtpNamSinh.CustomFormat = "dd/MM/yyyy";
-            this.dtpNamSinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNamSinh.Location = new System.Drawing.Point(202, 210);
-            this.dtpNamSinh.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpNamSinh.Name = "dtpNamSinh";
-            this.dtpNamSinh.Size = new System.Drawing.Size(183, 24);
-            this.dtpNamSinh.TabIndex = 15;
-            this.dtpNamSinh.Value = new System.DateTime(2018, 6, 27, 0, 0, 0, 0);
             // 
             // RadioButton2
             // 
@@ -404,7 +391,6 @@
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label lblTenChuyenMon;
         internal System.Windows.Forms.TextBox txtDiaChi;
-        internal System.Windows.Forms.DateTimePicker dtpNamSinh;
         internal System.Windows.Forms.RadioButton RadioButton2;
         internal System.Windows.Forms.RadioButton RadioButton1;
         internal System.Windows.Forms.TextBox txtHoTenBenhNhan;

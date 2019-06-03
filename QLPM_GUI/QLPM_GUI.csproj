@@ -56,11 +56,23 @@
     <Compile Include="FrmBenhNhan_GUI.Designer.cs">
       <DependentUpon>FrmBenhNhan_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCachDung_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCachDung_GUI.Designer.cs">
+      <DependentUpon>FrmCachDung_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmChiTietHoaDon_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmChiTietHoaDon_GUI.Designer.cs">
       <DependentUpon>FrmChiTietHoaDon_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDonVi_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDonVi_GUI.Designer.cs">
+      <DependentUpon>FrmDonVi_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHoaDon_GUI.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,18 @@
     <Compile Include="FrmThuoc_GUI.Designer.cs">
       <DependentUpon>FrmThuoc_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTienKham_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTienKham_GUI.Designer.cs">
+      <DependentUpon>FrmTienKham_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimKiemBenhNhan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimKiemBenhNhan_GUI.Designer.cs">
+      <DependentUpon>FrmTimKiemBenhNhan_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmToaThuoc_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +134,14 @@
     <EmbeddedResource Include="FrmBenhNhan_GUI.resx">
       <DependentUpon>FrmBenhNhan_GUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCachDung_GUI.resx">
+      <DependentUpon>FrmCachDung_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmChiTietHoaDon_GUI.resx">
       <DependentUpon>FrmChiTietHoaDon_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDonVi_GUI.resx">
+      <DependentUpon>FrmDonVi_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHoaDon_GUI.resx">
       <DependentUpon>FrmHoaDon_GUI.cs</DependentUpon>
@@ -130,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThuoc_GUI.resx">
       <DependentUpon>FrmThuoc_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTienKham_GUI.resx">
+      <DependentUpon>FrmTienKham_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimKiemBenhNhan_GUI.resx">
+      <DependentUpon>FrmTimKiemBenhNhan_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmToaThuoc_GUI.resx">
       <DependentUpon>FrmToaThuoc_GUI.cs</DependentUpon>

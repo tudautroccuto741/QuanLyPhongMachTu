@@ -24,6 +24,7 @@ namespace QLPM_GUI
         DataTable table_NgayKham = new DataTable();
         DataRow row;
         DataRow row_benhnhan;
+        string mabn;
      //   DataRow row_nhanvien;
        // DataRow row_ngaykham;
         int index;
@@ -43,8 +44,8 @@ namespace QLPM_GUI
             DataColumn _mabenhnhan = new DataColumn("MaBenhNhan");
             table_ChiTiet.Columns.Add(_maphieukham);
             table_ChiTiet.Columns.Add(_trieuchung);
-
             table_ChiTiet.Columns.Add(_mabenhnhan);
+          
             table_PhieuKham = DataProvider.LoadCSDL("Select * from tbl_PhieuKham");
             table_ChiTiet = table_PhieuKham;
             dgvPK.DataSource = table_ChiTiet;
@@ -52,10 +53,12 @@ namespace QLPM_GUI
 
         private void HienThi()
         {
-            dgvPK.DataSource = table_PhieuKham;
+            dgvPK.DataSource = table_ChiTiet;
             dgvPK.Columns["MaPhieuKham"].HeaderText = "Mã Phiếu Khám";
             dgvPK.Columns["Trieuchung"].HeaderText = "Triệu Chứng";     
             dgvPK.Columns["MaBenhNhan"].HeaderText = "Mã Bệnh Nhân";
+          //  dgvPK.Columns["HoTenBN"].HeaderText = "Tên Bệnh Nhân";
+            dgvPK.Columns["NgayKham"].HeaderText = "Ngày Khám";
         }
 
       
@@ -73,7 +76,7 @@ namespace QLPM_GUI
             table_PhieuKham = DataProvider.LoadCSDL("select * from tbl_PhieuKham");
             table_BenhNhan = DataProvider.LoadCSDL("select * from tbl_BenhNhan");
         //      table_NgayKham = DataProvider.LoadCSDL("SELECT tbl_BenhNhan.Ngaykham FROM(tbl_PhieuKham INNER JOIN tbl_BenhNhan ON tbl_PhieuKham.MaBenhNhan = tbl_BenhNhan.MaBenhNhan) WHERE(((Tbl_PhieuKham.MaBenhNhan) = '"+cbxMaBenhNhan.Text+"'))");
-            table_NgayKham = DataProvider.LoadCSDL("select Ngaykham from tbl_BenhNhan where MaBenhNhan ='" + cbxMaBenhNhan.Text + "'");
+            table_NgayKham = DataProvider.LoadCSDL("select Ngaykham from tbl_BenhNhan where MaBenhNhan ='" + mabn + "'");
             cbxMaBenhNhan.DataSource = table_BenhNhan;
             cbxMaBenhNhan.DisplayMember = "HotenBN";
             cbxMaBenhNhan.Enabled = true;
@@ -130,7 +133,7 @@ namespace QLPM_GUI
 
                     pk_DTO.MaPhieuKham = txtMaPhieuKham.Text.Trim();
                     pk_DTO.TrieuChung = txtTrieuChung.Text.Trim();
-                    pk_DTO.MaBenhNhan = cbxMaBenhNhan.Text;
+                    pk_DTO.MaBenhNhan = mabn;
           
 
                     pk_BUS.SuaThongTinPhieuKham(pk_DTO);
@@ -160,18 +163,22 @@ namespace QLPM_GUI
             DataGridViewRow row_bs = dgvPK.Rows[index];
             //dgvDSBS.CurrentRow.Selected = true;
             btnThem.Enabled = false;
+
             txtMaPhieuKham.Text = row_bs.Cells[0].FormattedValue.ToString();
             txtTrieuChung.Text = row_bs.Cells[1].FormattedValue.ToString();
             cbxMaBenhNhan.Text = row_bs.Cells[2].FormattedValue.ToString();
+            table_BenhNhan = DataProvider.LoadCSDL("SELECT tbl_PhieuKham.MaPhieuKham, tbl_PhieuKham.TrieuChung, tbl_BenhNhan.MaBenhNhan, tbl_BenhNhan.HotenBN, tbl_BenhNhan.NgayKham FROM(tbl_PhieuKham INNER JOIN tbl_BenhNhan ON tbl_PhieuKham.MaBenhNhan = tbl_BenhNhan.MaBenhNhan) WHERE (Tbl_PhieuKham.MaBenhNhan) = '" + mabn + "'");
+
         }
 
         private void cbxMaBenhNhan_SelectedIndexChanged(object sender, EventArgs e)
         {
             index = cbxMaBenhNhan.SelectedIndex;
             row_benhnhan = table_BenhNhan.Rows[index];
-            //     row_ngaykham = table_NgayKham.Rows[1];
+
+            mabn = row_benhnhan["MaBenhNhan"].ToString();
             txtNgayKham.Text = row_benhnhan["Ngaykham"].ToString();
-            txtTenBenhNhan.Text = row_benhnhan["HotenBN"].ToString();
+         //   txtTenBenhNhan.Text = row_benhnhan["HotenBN"].ToString();
             txtGioiTinh.Text = row_benhnhan["GioitinhBN"].ToString();
             txtTuoi.Text =  row_benhnhan["NamsinhBN"].ToString();
         }
@@ -197,7 +204,7 @@ namespace QLPM_GUI
 
                     pk_DTO.MaPhieuKham = txtMaPhieuKham.Text.Trim();
                     pk_DTO.TrieuChung = txtTrieuChung.Text.Trim();
-                    pk_DTO.MaBenhNhan = cbxMaBenhNhan.Text;
+                    pk_DTO.MaBenhNhan = mabn;
                     pk_DTO.NgayKham = txtNgayKham.Text;
 
                     pk_BUS.NhapThongTinPhieuKhamMoi(pk_DTO);

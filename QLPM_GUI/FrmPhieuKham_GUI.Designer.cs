@@ -85,9 +85,9 @@
             this.lblMaBenhNhan.Location = new System.Drawing.Point(8, 144);
             this.lblMaBenhNhan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaBenhNhan.Name = "lblMaBenhNhan";
-            this.lblMaBenhNhan.Size = new System.Drawing.Size(133, 24);
+            this.lblMaBenhNhan.Size = new System.Drawing.Size(141, 24);
             this.lblMaBenhNhan.TabIndex = 2;
-            this.lblMaBenhNhan.Text = "Mã bệnh nhân";
+            this.lblMaBenhNhan.Text = "Tên bệnh nhân";
             // 
             // lblNgayKham
             // 

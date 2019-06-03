@@ -69,6 +69,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.btnCachDung = new System.Windows.Forms.Button();
+            this.btnTimKienBN = new System.Windows.Forms.Button();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox9)).BeginInit();
@@ -94,6 +98,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDonViVaCachDung
@@ -103,12 +109,12 @@
             this.btnDonViVaCachDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonViVaCachDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonViVaCachDung.ForeColor = System.Drawing.Color.White;
-            this.btnDonViVaCachDung.Location = new System.Drawing.Point(60, 605);
+            this.btnDonViVaCachDung.Location = new System.Drawing.Point(65, 658);
             this.btnDonViVaCachDung.Margin = new System.Windows.Forms.Padding(4);
             this.btnDonViVaCachDung.Name = "btnDonViVaCachDung";
             this.btnDonViVaCachDung.Size = new System.Drawing.Size(256, 49);
             this.btnDonViVaCachDung.TabIndex = 22;
-            this.btnDonViVaCachDung.Text = "Đơn vị và cách dùng\r\n\r\n";
+            this.btnDonViVaCachDung.Text = "Quản lý đơn vị thuốc\r\n\r\n";
             this.btnDonViVaCachDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDonViVaCachDung.UseVisualStyleBackColor = false;
             // 
@@ -154,7 +160,7 @@
             // PictureBox9
             // 
             this.PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox9.Image")));
-            this.PictureBox9.Location = new System.Drawing.Point(8, 732);
+            this.PictureBox9.Location = new System.Drawing.Point(9, 829);
             this.PictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox9.Name = "PictureBox9";
             this.PictureBox9.Size = new System.Drawing.Size(53, 49);
@@ -165,7 +171,7 @@
             // PictureBox6
             // 
             this.PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox6.Image")));
-            this.PictureBox6.Location = new System.Drawing.Point(8, 593);
+            this.PictureBox6.Location = new System.Drawing.Point(8, 658);
             this.PictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox6.Name = "PictureBox6";
             this.PictureBox6.Size = new System.Drawing.Size(53, 49);
@@ -198,7 +204,7 @@
             // PictureBox8
             // 
             this.PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox8.Image")));
-            this.PictureBox8.Location = new System.Drawing.Point(9, 662);
+            this.PictureBox8.Location = new System.Drawing.Point(9, 772);
             this.PictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox8.Name = "PictureBox8";
             this.PictureBox8.Size = new System.Drawing.Size(53, 49);
@@ -293,7 +299,7 @@
             this.btnBaoCaoDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCaoDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCaoDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCaoDoanhThu.Location = new System.Drawing.Point(60, 662);
+            this.btnBaoCaoDoanhThu.Location = new System.Drawing.Point(60, 772);
             this.btnBaoCaoDoanhThu.Margin = new System.Windows.Forms.Padding(4);
             this.btnBaoCaoDoanhThu.Name = "btnBaoCaoDoanhThu";
             this.btnBaoCaoDoanhThu.Size = new System.Drawing.Size(256, 49);
@@ -358,7 +364,7 @@
             this.btnBaoCaoDungThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCaoDungThuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCaoDungThuoc.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCaoDungThuoc.Location = new System.Drawing.Point(60, 734);
+            this.btnBaoCaoDungThuoc.Location = new System.Drawing.Point(65, 829);
             this.btnBaoCaoDungThuoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnBaoCaoDungThuoc.Name = "btnBaoCaoDungThuoc";
             this.btnBaoCaoDungThuoc.Size = new System.Drawing.Size(256, 49);
@@ -380,6 +386,10 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlMenu.Controls.Add(this.btnTimKienBN);
+            this.pnlMenu.Controls.Add(this.pictureBox23);
+            this.pnlMenu.Controls.Add(this.btnCachDung);
+            this.pnlMenu.Controls.Add(this.pictureBox22);
             this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Controls.Add(this.pictureBox20);
             this.pnlMenu.Controls.Add(this.panel1);
@@ -412,7 +422,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(300, 794);
+            this.pnlMenu.Size = new System.Drawing.Size(315, 959);
             this.pnlMenu.TabIndex = 21;
             // 
             // button1
@@ -422,7 +432,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(60, 522);
+            this.button1.Location = new System.Drawing.Point(65, 522);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(256, 49);
@@ -449,7 +459,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 71);
+            this.panel1.Size = new System.Drawing.Size(315, 71);
             this.panel1.TabIndex = 23;
             // 
             // PictureBox16
@@ -496,9 +506,9 @@
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.lblTen);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
+            this.panel2.Location = new System.Drawing.Point(315, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(935, 71);
+            this.panel2.Size = new System.Drawing.Size(920, 71);
             this.panel2.TabIndex = 24;
             // 
             // btnLogin
@@ -629,12 +639,66 @@
             this.pictureBox21.TabIndex = 31;
             this.pictureBox21.TabStop = false;
             // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
+            this.pictureBox22.Location = new System.Drawing.Point(9, 715);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 32;
+            this.pictureBox22.TabStop = false;
+            // 
+            // btnCachDung
+            // 
+            this.btnCachDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCachDung.FlatAppearance.BorderSize = 0;
+            this.btnCachDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCachDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCachDung.ForeColor = System.Drawing.Color.White;
+            this.btnCachDung.Location = new System.Drawing.Point(65, 715);
+            this.btnCachDung.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCachDung.Name = "btnCachDung";
+            this.btnCachDung.Size = new System.Drawing.Size(256, 49);
+            this.btnCachDung.TabIndex = 33;
+            this.btnCachDung.Text = "Quản lý cách dùng thuốc";
+            this.btnCachDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCachDung.UseVisualStyleBackColor = false;
+            // 
+            // btnTimKienBN
+            // 
+            this.btnTimKienBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTimKienBN.FlatAppearance.BorderSize = 0;
+            this.btnTimKienBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKienBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKienBN.ForeColor = System.Drawing.Color.White;
+            this.btnTimKienBN.Location = new System.Drawing.Point(65, 591);
+            this.btnTimKienBN.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKienBN.Name = "btnTimKienBN";
+            this.btnTimKienBN.Size = new System.Drawing.Size(256, 49);
+            this.btnTimKienBN.TabIndex = 35;
+            this.btnTimKienBN.Text = "Tìm kiếm bệnh nhân";
+            this.btnTimKienBN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKienBN.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
+            this.pictureBox23.Location = new System.Drawing.Point(9, 591);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 34;
+            this.pictureBox23.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1235, 794);
+            this.ClientSize = new System.Drawing.Size(1235, 959);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox15);
@@ -676,6 +740,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -722,6 +788,10 @@
         internal System.Windows.Forms.PictureBox pictureBox19;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
         internal System.Windows.Forms.PictureBox pictureBox21;
+        internal System.Windows.Forms.Button btnCachDung;
+        internal System.Windows.Forms.PictureBox pictureBox22;
+        internal System.Windows.Forms.Button btnTimKienBN;
+        internal System.Windows.Forms.PictureBox pictureBox23;
     }
 }
 

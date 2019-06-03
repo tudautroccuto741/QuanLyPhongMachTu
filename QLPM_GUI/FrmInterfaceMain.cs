@@ -54,7 +54,8 @@ namespace QLPM_GUI
                                 btnThayDoiTienKham.Enabled = false;
                                 btnTaoToaThuoc.Enabled = false;
                                 btnQuanLiThuoc.Enabled = false;
-                                btnDonViVaCachDung.Enabled = false;
+                                btnDonVi.Enabled = false;
+                                btnCachDung.Enabled = false;
 
                             }
 
@@ -66,6 +67,11 @@ namespace QLPM_GUI
                                 btnThayDoiTienKham.Enabled = false;
                                 btnQuanLiThuoc.Enabled = false;
                                 btnBaoCaoDoanhThu.Enabled = false;
+                                btnQuanLiThuoc.Enabled = false;
+                                btnDonVi.Enabled = false;
+                                btnCachDung.Enabled = false;
+                                btnPhieuKham.Enabled = false;
+                                btnCTHD.Enabled = false;
                             }
 
                         }
@@ -152,6 +158,35 @@ namespace QLPM_GUI
                 Close();
 
             }
+        }
+
+        private void btnCachDung_Click(object sender, EventArgs e)
+        {
+            FrmCachDung_GUI FrmCachDung = new FrmCachDung_GUI();
+            FrmCachDung.Show();
+        }
+
+        private void btnDonVi_Click(object sender, EventArgs e)
+        {
+            FrmDonVi_GUI FrmDonVi = new FrmDonVi_GUI();
+            FrmDonVi.Show();
+        }
+
+        private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThayDoiTienKham_Click(object sender, EventArgs e)
+        {
+            FrmTienKham_GUI FrmTienKham = new FrmTienKham_GUI();
+            FrmTienKham.Show();
+        }
+
+        private void btnTimKienBN_Click(object sender, EventArgs e)
+        {
+            FrmTimKiemBenhNhan_GUI FrmTimKiemBenhNhan = new FrmTimKiemBenhNhan_GUI();
+            FrmTimKiemBenhNhan.Show();
         }
     }
 }

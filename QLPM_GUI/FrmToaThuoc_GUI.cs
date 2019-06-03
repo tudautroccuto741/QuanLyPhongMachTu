@@ -31,7 +31,7 @@ namespace QLPM_GUI
 
 
         DataRow row, row_phieukham,row_LoginUser;
-        DataRow row_benhnhan,row_thuoc,row_donvi,row_cachdung,row_benh;
+        DataRow row_thuoc,row_donvi,row_cachdung,row_benh;
         
         ToaThuoc_DTO tt_DTO;
         ToaThuoc_BUS tt_BUS;
@@ -40,7 +40,7 @@ namespace QLPM_GUI
         int index, indexdv, indexcd;
         string _usename = "";
         public  string _Loginuser = "";
-        string manhansu = "USER_003";
+        string manhansu = "";
         string mabn,matoathuoc,mathuoc,madonvi,macachdung,mabenh;
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace QLPM_GUI
             table_CachDung = DataProvider.LoadCSDL("select * from tbl_CachDung");
             table_Thuoc = DataProvider.LoadCSDL("select * from tbl_Thuoc");
             table_Benh = DataProvider.LoadCSDL("select * from tbl_ChuanDoan");
-            table_USER = DataProvider.LoadCSDL("select * from tbl_NhanSu where MaNhanSu='USER_003'");
+
             
             cbxPhieuKham.DataSource = table_PhieuKham;
             cbxPhieuKham.DisplayMember = "MaPhieuKham";
@@ -180,11 +180,39 @@ namespace QLPM_GUI
             cbxBenh.DisplayMember = "Tenbenh";
             cbxBenh.Enabled = true;
 
-            row_LoginUser = table_USER.Rows[0];
-            txtTenBacSi.Text = row_LoginUser["HotenNS"].ToString();
+          
             matoathuoc = DataProvider.Auto_Create_MaToaThuoc();
             Tao_DGV();
             HienThi();
+            foreach (KeyValuePair<string, User> entry in FrmLogin_GUI.user)
+            {
+                if (!FrmLogin_GUI.user.ContainsKey(FrmLogin_GUI.username)) { return; }
+                manhansu = entry.Key;
+
+                DataProvider.connection = new SqlConnection(DataProvider.connection_String);
+                DataProvider.connection.Open();
+                try
+                {
+                    string sql = "Select _vaitro from dbo._User where MaNhanSu = '" + manhansu + "'";
+                    SqlCommand cmd = new SqlCommand(sql, DataProvider.connection);
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("saI");
+                }
+                finally
+                {
+
+                    table_USER = DataProvider.LoadCSDL("select * from tbl_NhanSu where MaNhanSu='"+manhansu+"'");
+                    row_LoginUser = table_USER.Rows[0];
+                    txtTenBacSi.Text = row_LoginUser["HotenNS"].ToString();
+                    DataProvider.connection.Close();
+                    DataProvider.connection.Dispose();
+                    DataProvider.connection = null;
+                }
+            }
         }
         
         //Thêm
