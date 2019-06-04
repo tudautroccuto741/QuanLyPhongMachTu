@@ -160,13 +160,14 @@ namespace QLPM_GUI
                 tienthuoc = Int32.Parse(strtienthuoc);
             //  string tong = (txtTienKham.Text + txtTienThuoc.Text).ToString();
             tongtien = tienthuoc + tienkham;
-                blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thêm thuốc vào toa thuốc", "Thêm Toa Thuốc", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
+                blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thêm hoa don", "Thêm Hoa Don", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
 
             //MessageBox.Show(blresult.ToString());
             //Tổng tiền
 
-        
-                if (blresult == 1)
+
+
+            if (blresult == 1)
                 {
 
                     hd_DTO = new HoaDon_DTO();
