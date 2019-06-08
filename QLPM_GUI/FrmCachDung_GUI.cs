@@ -165,5 +165,10 @@ namespace QLPM_GUI
             txtMaCachDungMoi.Text = row_bs.Cells[0].FormattedValue.ToString();
             txtTenCachDung.Text = row_bs.Cells[1].FormattedValue.ToString();
         }
+
+        private void dgvCachDung_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

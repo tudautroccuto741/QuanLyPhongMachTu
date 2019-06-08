@@ -215,5 +215,15 @@ namespace QLPM_GUI
                 }
             }
         }
+
+        private void txtMaPhieuKham_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace QLPM_DTO
     public class DataProvider
     {
         // Connection String thiết lập các thông số để kết nối.
-        public static string connection_String = @"Data Source=DESKTOP-I4MDHTB;Initial Catalog=DoAnQLPM;Integrated Security=True";
+        public static string connection_String = @"Data Source=TUCAONGUYEN\SQLEXPRESS;Initial Catalog=DoAnQLPM;Integrated Security=True";
 
         // Tạo kết nối
         public static SqlConnection connection = new SqlConnection(connection_String);

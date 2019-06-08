@@ -51,10 +51,9 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(182, 283);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(136, 230);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(133, 49);
+            this.btnXoa.Size = new System.Drawing.Size(100, 40);
             this.btnXoa.TabIndex = 59;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -67,10 +66,9 @@
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(358, 283);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCapNhat.Location = new System.Drawing.Point(268, 230);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(133, 49);
+            this.btnCapNhat.Size = new System.Drawing.Size(100, 40);
             this.btnCapNhat.TabIndex = 58;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
@@ -83,10 +81,9 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(537, 283);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Location = new System.Drawing.Point(403, 230);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(133, 49);
+            this.btnHuy.Size = new System.Drawing.Size(100, 40);
             this.btnHuy.TabIndex = 57;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -99,10 +96,9 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(14, 283);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(10, 230);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(133, 49);
+            this.btnThem.Size = new System.Drawing.Size(100, 40);
             this.btnThem.TabIndex = 56;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -111,20 +107,19 @@
             // dgvCachDung
             // 
             this.dgvCachDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCachDung.Location = new System.Drawing.Point(358, 87);
-            this.dgvCachDung.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCachDung.Location = new System.Drawing.Point(268, 71);
             this.dgvCachDung.Name = "dgvCachDung";
-            this.dgvCachDung.Size = new System.Drawing.Size(536, 171);
+            this.dgvCachDung.Size = new System.Drawing.Size(402, 139);
             this.dgvCachDung.TabIndex = 55;
             this.dgvCachDung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCachDung_CellClick);
+            this.dgvCachDung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCachDung_CellContentClick);
             // 
             // txtTenCachDung
             // 
             this.txtTenCachDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenCachDung.Location = new System.Drawing.Point(213, 194);
-            this.txtTenCachDung.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenCachDung.Location = new System.Drawing.Point(160, 158);
             this.txtTenCachDung.Name = "txtTenCachDung";
-            this.txtTenCachDung.Size = new System.Drawing.Size(123, 29);
+            this.txtTenCachDung.Size = new System.Drawing.Size(93, 24);
             this.txtTenCachDung.TabIndex = 54;
             this.txtTenCachDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -132,10 +127,9 @@
             // 
             this.txtMaCachDungMoi.Enabled = false;
             this.txtMaCachDungMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCachDungMoi.Location = new System.Drawing.Point(213, 107);
-            this.txtMaCachDungMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaCachDungMoi.Location = new System.Drawing.Point(160, 87);
             this.txtMaCachDungMoi.Name = "txtMaCachDungMoi";
-            this.txtMaCachDungMoi.Size = new System.Drawing.Size(123, 29);
+            this.txtMaCachDungMoi.Size = new System.Drawing.Size(93, 24);
             this.txtMaCachDungMoi.TabIndex = 53;
             this.txtMaCachDungMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -144,10 +138,9 @@
             this.lblTenCachDung.AutoSize = true;
             this.lblTenCachDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenCachDung.ForeColor = System.Drawing.Color.Black;
-            this.lblTenCachDung.Location = new System.Drawing.Point(9, 197);
-            this.lblTenCachDung.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTenCachDung.Location = new System.Drawing.Point(7, 160);
             this.lblTenCachDung.Name = "lblTenCachDung";
-            this.lblTenCachDung.Size = new System.Drawing.Size(175, 24);
+            this.lblTenCachDung.Size = new System.Drawing.Size(134, 18);
             this.lblTenCachDung.TabIndex = 52;
             this.lblTenCachDung.Text = "Tên cách dùng mới";
             // 
@@ -156,20 +149,18 @@
             this.lblMaCachDung.AutoSize = true;
             this.lblMaCachDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaCachDung.ForeColor = System.Drawing.Color.Black;
-            this.lblMaCachDung.Location = new System.Drawing.Point(9, 111);
-            this.lblMaCachDung.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaCachDung.Location = new System.Drawing.Point(7, 90);
             this.lblMaCachDung.Name = "lblMaCachDung";
-            this.lblMaCachDung.Size = new System.Drawing.Size(167, 24);
+            this.lblMaCachDung.Size = new System.Drawing.Size(130, 18);
             this.lblMaCachDung.TabIndex = 51;
             this.lblMaCachDung.Text = "Mã cách dùng mới";
             // 
             // picPhieuKhamBenh
             // 
             this.picPhieuKhamBenh.Image = ((System.Drawing.Image)(resources.GetObject("picPhieuKhamBenh.Image")));
-            this.picPhieuKhamBenh.Location = new System.Drawing.Point(369, 13);
-            this.picPhieuKhamBenh.Margin = new System.Windows.Forms.Padding(4);
+            this.picPhieuKhamBenh.Location = new System.Drawing.Point(277, 11);
             this.picPhieuKhamBenh.Name = "picPhieuKhamBenh";
-            this.picPhieuKhamBenh.Size = new System.Drawing.Size(60, 55);
+            this.picPhieuKhamBenh.Size = new System.Drawing.Size(45, 45);
             this.picPhieuKhamBenh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPhieuKhamBenh.TabIndex = 50;
             this.picPhieuKhamBenh.TabStop = false;
@@ -179,19 +170,18 @@
             this.lblThemDonVi.AutoSize = true;
             this.lblThemDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThemDonVi.ForeColor = System.Drawing.Color.Red;
-            this.lblThemDonVi.Location = new System.Drawing.Point(473, 25);
-            this.lblThemDonVi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblThemDonVi.Location = new System.Drawing.Point(355, 20);
             this.lblThemDonVi.Name = "lblThemDonVi";
-            this.lblThemDonVi.Size = new System.Drawing.Size(145, 31);
+            this.lblThemDonVi.Size = new System.Drawing.Size(116, 25);
             this.lblThemDonVi.TabIndex = 49;
             this.lblThemDonVi.Text = "Cách dùng";
             // 
             // FrmCachDung_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(1024, 412);
+            this.ClientSize = new System.Drawing.Size(768, 335);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnHuy);
@@ -203,6 +193,7 @@
             this.Controls.Add(this.lblMaCachDung);
             this.Controls.Add(this.picPhieuKhamBenh);
             this.Controls.Add(this.lblThemDonVi);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCachDung_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCachDung_GUI";

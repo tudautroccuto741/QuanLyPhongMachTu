@@ -48,6 +48,11 @@ namespace QLPM_GUI
             Close();
         }
 
+        private void txtDonVi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //Cell CLick
         private void dgvToaThuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
