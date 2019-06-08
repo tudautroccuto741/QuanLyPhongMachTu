@@ -320,6 +320,8 @@ namespace QLPM_GUI
             dgvToaThuoc.Columns["Tendonvi"].HeaderText = "Tên Đơn Vị";
             dgvToaThuoc.Columns["Tencachdung"].HeaderText = "Tên Cách Dùng";
             dgvToaThuoc.Columns["Soluong"].HeaderText = "Số Lượng";
+            dgvToaThuoc.Columns["Tenthuoc"].Width = 120;
+            dgvToaThuoc.Columns["Tencachdung"].Width = 220;
         }
 
     }

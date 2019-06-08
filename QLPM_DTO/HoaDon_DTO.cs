@@ -23,8 +23,8 @@ namespace QLPM_DTO
                     SqlCommand cmd = DataProvider.connection.CreateCommand();
                     cmd.CommandText = sql;
 
-                    cmd.Parameters.Add("@MaPhieuKham", SqlDbType.NChar).Value = MaPhieuKham;
                     cmd.Parameters.Add("@MaHoaDon", SqlDbType.NChar).Value = MaHoaDon;
+                    cmd.Parameters.Add("@MaPhieuKham", SqlDbType.NChar).Value = MaPhieuKham;                  
                     cmd.Parameters.Add("@MaBenhNhan", SqlDbType.NChar).Value = MaBenhNhan;
                     cmd.Parameters.Add("@Tienkham", SqlDbType.NChar).Value = Tienkham;
                     cmd.Parameters.Add("@Tienthuoc", SqlDbType.NChar).Value = Tienthuoc;
