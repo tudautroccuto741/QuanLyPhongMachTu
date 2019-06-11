@@ -69,11 +69,11 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="FormBaoCao.cs">
+    <Compile Include="FrmBaoCaoDoanhThu_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBaoCao.Designer.cs">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <Compile Include="FrmBaoCaoDoanhThu_GUI.Designer.cs">
+      <DependentUpon>FrmBaoCaoDoanhThu_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBCHDNgay.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpBCHDTong.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaoCao.resx">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBaoCaoDoanhThu_GUI.resx">
+      <DependentUpon>FrmBaoCaoDoanhThu_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBCHDNgay.resx">
       <DependentUpon>FrmBCHDNgay.cs</DependentUpon>

@@ -28,7 +28,7 @@ namespace QLPM_GUI
         {
             int blresult;
             blresult = 0;
-            blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thêm bệnh nhân", "Thêm Bệnh Nhân", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
+            blresult = Convert.ToInt16(MessageBox.Show("Bạn có muốn thay đổi tiền khám", "Thay đổi tiền khám", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation));
             //MessageBox.Show(blresult.ToString());
             if (blresult == 1)
             {

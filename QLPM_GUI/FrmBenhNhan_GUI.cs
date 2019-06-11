@@ -22,6 +22,8 @@ namespace QLPM_GUI
         DataRow row;
         int index;
         string gioitinhbn;
+
+
         public FrmBenhNhan_GUI()
         {
             InitializeComponent();
@@ -89,31 +91,33 @@ namespace QLPM_GUI
                 {
                     bn_DTO = new BenhNhan_DTO();
                     bn_BUS = new BenhNhan_BUS();
+                  
+                        if (RadioButton1.Checked == true)
+                        {
+                            gioitinhbn = "Nam";
+                        }
+                        else if (RadioButton2.Checked == true)
+                        {
+                            gioitinhbn = "Nữ";
+                        }
+                        bn_DTO.MaBenhNhan = txtMaBenhNhan.Text.Trim();
+                        bn_DTO.HoTenBenhNhan = txtHoTenBenhNhan.Text.Trim();
+                        bn_DTO.gioitinhbn = gioitinhbn;
+                        bn_DTO.NamSinh = txtNamSinh.Text.Trim();
+                        bn_DTO.DiaChi = txtDiaChi.Text.Trim();
+                        bn_DTO.NgayKham = dtpNgayKham.Value.ToString("dd/MM/yyyy");
+                        bn_DTO.CMND = txtCMND.Text.Trim();
 
-                    if (RadioButton1.Checked == true)
-                    {
-                        gioitinhbn = "Nam";
-                    }
-                    else if (RadioButton2.Checked == true)
-                    {
-                        gioitinhbn = "Nữ";
-                    }
-                    bn_DTO.MaBenhNhan = txtMaBenhNhan.Text.Trim();
-                    bn_DTO.HoTenBenhNhan = txtHoTenBenhNhan.Text.Trim();
-                    bn_DTO.gioitinhbn = gioitinhbn;
-                    bn_DTO.NamSinh = txtNamSinh.Text.Trim();
-                    bn_DTO.DiaChi = txtDiaChi.Text.Trim();
-                    bn_DTO.NgayKham = dtpNgayKham.Value.ToString("MM/dd/yyyy");
-                    bn_DTO.CMND = txtCMND.Text.Trim();
+                        bn_BUS.NhapThongTinBenhNhanMoi(bn_DTO);
 
-                    bn_BUS.NhapThongTinBenhNhanMoi(bn_DTO);
-
-                    FrmBenhNhan_GUI FrmBenhNhan = new FrmBenhNhan_GUI();
-                    Close();
-                    FrmBenhNhan.Show();
+                        FrmBenhNhan_GUI FrmBenhNhan = new FrmBenhNhan_GUI();
+                        Close();
+                        FrmBenhNhan.Show();
+                    
                 }
             }
         }
+     
 
         private void btnXoa_Click(object sender, EventArgs e)
         {

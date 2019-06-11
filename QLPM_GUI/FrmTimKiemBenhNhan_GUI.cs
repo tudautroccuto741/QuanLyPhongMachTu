@@ -16,6 +16,7 @@ namespace QLPM_GUI
         DataTable table_BenhNhan = new DataTable();
         DataTable table_ChiTiet = new DataTable();
         DataTable table_Test = new DataTable();
+        DataTable table_Timkiem = new DataTable();
         DataRow row;
         string hoten, mabn;
         int indexbn;
@@ -36,6 +37,12 @@ namespace QLPM_GUI
         private void HienThi()
         {
             dgvTraCuu.DataSource = table_BenhNhan;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            table_Timkiem = DataProvider.LoadCSDL("Select * from tbl_BenhNhan where HotenBN Like  '%" + txtTimKiem.Text + "%'");
+            dgvTraCuu.DataSource = table_Timkiem;
         }
 
         private void cbHoTenBenhNhan_SelectedIndexChanged(object sender, EventArgs e)

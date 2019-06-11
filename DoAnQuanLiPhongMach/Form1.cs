@@ -56,15 +56,13 @@ using System.Windows.Forms;
 
         private void btnBaoCaoDungThuoc_Click(object sender, EventArgs e)
         {
-            FormBaoCao FormBC = new FormBaoCao();
-            FormBC.Show();
+     
 
         }
 
         private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
-            FormBaoCao FormBC = new FormBaoCao();
-            FormBC.Show();
+       
         }
     }
 }

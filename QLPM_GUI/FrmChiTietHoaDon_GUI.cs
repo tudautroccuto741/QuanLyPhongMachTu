@@ -30,6 +30,12 @@ namespace QLPM_GUI
 
         DataRow row, row_phieukham, row_LoginUser, row_ThamSo, row_tienthuoc;
         DataRow row_benhnhan, row_thuoc, row_donvi, row_cachdung, row_benh, row_important;
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public string _username = "";
 
         int indexbn;

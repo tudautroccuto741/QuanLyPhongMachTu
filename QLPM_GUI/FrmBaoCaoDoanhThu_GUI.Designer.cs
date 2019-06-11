@@ -1,6 +1,6 @@
-﻿namespace DoAnQuanLiPhongMach
+﻿namespace QLPM_GUI
 {
-    partial class FormBaoCao
+    partial class FrmBaoCaoDoanhThu_GUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBaoCao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaoCaoDoanhThu_GUI));
             this.button1 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.picPhieuKhamBenh = new System.Windows.Forms.PictureBox();
@@ -43,10 +43,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(459, 152);
+            this.button1.Location = new System.Drawing.Point(464, 156);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 75);
-            this.button1.TabIndex = 62;
+            this.button1.TabIndex = 66;
             this.button1.Text = "Báo cáo tổng doanh thu";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -58,10 +58,10 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(158, 152);
+            this.btnThem.Location = new System.Drawing.Point(163, 156);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(150, 75);
-            this.btnThem.TabIndex = 61;
+            this.btnThem.TabIndex = 65;
             this.btnThem.Text = "Báo cáo doanh thu theo ngày";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -69,11 +69,11 @@
             // picPhieuKhamBenh
             // 
             this.picPhieuKhamBenh.Image = ((System.Drawing.Image)(resources.GetObject("picPhieuKhamBenh.Image")));
-            this.picPhieuKhamBenh.Location = new System.Drawing.Point(233, 13);
+            this.picPhieuKhamBenh.Location = new System.Drawing.Point(238, 17);
             this.picPhieuKhamBenh.Name = "picPhieuKhamBenh";
             this.picPhieuKhamBenh.Size = new System.Drawing.Size(50, 50);
             this.picPhieuKhamBenh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPhieuKhamBenh.TabIndex = 60;
+            this.picPhieuKhamBenh.TabIndex = 64;
             this.picPhieuKhamBenh.TabStop = false;
             // 
             // lblThemDonVi
@@ -81,25 +81,25 @@
             this.lblThemDonVi.AutoSize = true;
             this.lblThemDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThemDonVi.ForeColor = System.Drawing.Color.Red;
-            this.lblThemDonVi.Location = new System.Drawing.Point(329, 38);
+            this.lblThemDonVi.Location = new System.Drawing.Point(334, 42);
             this.lblThemDonVi.Name = "lblThemDonVi";
             this.lblThemDonVi.Size = new System.Drawing.Size(207, 25);
-            this.lblThemDonVi.TabIndex = 59;
+            this.lblThemDonVi.TabIndex = 63;
             this.lblThemDonVi.Text = "Báo Cáo Doanh Thu";
             // 
-            // FormBaoCao
+            // FrmBaoCaoDoanhThu_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(734, 361);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.picPhieuKhamBenh);
             this.Controls.Add(this.lblThemDonVi);
-            this.Name = "FormBaoCao";
+            this.Name = "FrmBaoCaoDoanhThu_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBaoCao";
+            this.Text = "FrmBaoCaoDoanhThu_GUI";
             ((System.ComponentModel.ISupportInitialize)(this.picPhieuKhamBenh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -42,7 +42,7 @@ namespace QLPM_GUI
 
                             if (String.Compare(vaitro.Trim(), "...Admin...") == 0)
                             {
-                                btnBaoCaoDoanhThu.Enabled = false;
+                                btnBaoCaoDoanhThu.Enabled = true;
                                 btnQuanLyBenhNhan.Enabled = false;
                                 btnTaoToaThuoc.Enabled = false;
 
@@ -56,6 +56,7 @@ namespace QLPM_GUI
                                 btnQuanLiThuoc.Enabled = false;
                                 btnDonVi.Enabled = false;
                                 btnCachDung.Enabled = false;
+                                btnBaoCaoDoanhThu.Enabled = true;
 
                             }
 
@@ -174,7 +175,8 @@ namespace QLPM_GUI
 
         private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
-
+            FrmBaoCaoDoanhThu_GUI FormBC = new FrmBaoCaoDoanhThu_GUI();
+            FormBC.Show();
         }
 
         private void btnThayDoiTienKham_Click(object sender, EventArgs e)

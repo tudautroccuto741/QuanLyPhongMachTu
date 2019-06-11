@@ -1,5 +1,4 @@
-﻿using QLPM_GUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAnQuanLiPhongMach
+namespace QLPM_GUI
 {
-    public partial class FormBaoCao : Form
+    public partial class FrmBaoCaoDoanhThu_GUI : Form
     {
-        public FormBaoCao()
+        public FrmBaoCaoDoanhThu_GUI()
         {
             InitializeComponent();
         }

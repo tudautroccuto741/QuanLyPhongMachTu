@@ -75,12 +75,12 @@ namespace QLPM_GUI
                 
 
 
-                cthd_DTO = new ChiTietHoaDon_DTO();
-                cthd_BUS = new ChiTietHoaDon_BUS();
-                cthd_DTO.MaHoaDon = mahoadon;
+               // cthd_DTO = new ChiTietHoaDon_DTO();
+               // cthd_BUS = new ChiTietHoaDon_BUS();
+               // cthd_DTO.MaHoaDon = mahoadon;
 
                 hd_BUS.XoaHoaDon(hd_DTO);
-                cthd_BUS.XoaChiTietHoaDon(cthd_DTO);
+               // cthd_BUS.XoaChiTietHoaDon(cthd_DTO);
 
                 FrmHoaDon_GUI FrmHoaDon = new FrmHoaDon_GUI();
                 Close();
