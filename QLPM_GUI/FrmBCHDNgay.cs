@@ -29,5 +29,10 @@ namespace QLPM_GUI
             crpView.ReportSource = crpBCHDNgay1;
             crpView.Refresh();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,57 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crpView = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpOutput = new System.Windows.Forms.DateTimePicker();
-            this.dtpInput = new System.Windows.Forms.DateTimePicker();
-            this.btLapBaoCao = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.crpBCHDNgay1 = new QLPM_GUI.crpBCHDNgay();
-            this.groupBox1.SuspendLayout();
+            this.btLapBaoCao = new System.Windows.Forms.Button();
+            this.dtpInput = new System.Windows.Forms.DateTimePicker();
+            this.dtpOutput = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.crpView = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // crpView
+            // groupBox2
             // 
-            this.crpView.ActiveViewIndex = 0;
-            this.crpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crpView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crpView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crpView.Location = new System.Drawing.Point(3, 16);
-            this.crpView.Name = "crpView";
-            this.crpView.ReportSource = this.crpBCHDNgay1;
-            this.crpView.Size = new System.Drawing.Size(770, 324);
-            this.crpView.TabIndex = 0;
-            this.crpView.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dtpOutput);
-            this.groupBox1.Controls.Add(this.dtpInput);
-            this.groupBox1.Controls.Add(this.btLapBaoCao);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 77);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nhập ngày cần xem";
-            // 
-            // dtpOutput
-            // 
-            this.dtpOutput.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOutput.Location = new System.Drawing.Point(284, 19);
-            this.dtpOutput.Name = "dtpOutput";
-            this.dtpOutput.Size = new System.Drawing.Size(102, 20);
-            this.dtpOutput.TabIndex = 5;
-            // 
-            // dtpInput
-            // 
-            this.dtpInput.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInput.Location = new System.Drawing.Point(117, 19);
-            this.dtpInput.Name = "dtpInput";
-            this.dtpInput.Size = new System.Drawing.Size(95, 20);
-            this.dtpInput.TabIndex = 4;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.Controls.Add(this.crpView);
+            this.groupBox2.Location = new System.Drawing.Point(12, 95);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(779, 359);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kết Quả";
             // 
             // btLapBaoCao
             // 
@@ -90,15 +63,50 @@
             this.btLapBaoCao.UseVisualStyleBackColor = true;
             this.btLapBaoCao.Click += new System.EventHandler(this.btLapBaoCao_Click);
             // 
-            // groupBox2
+            // dtpInput
             // 
-            this.groupBox2.Controls.Add(this.crpView);
-            this.groupBox2.Location = new System.Drawing.Point(12, 95);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 343);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Kết Quả";
+            this.dtpInput.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInput.Location = new System.Drawing.Point(117, 19);
+            this.dtpInput.Name = "dtpInput";
+            this.dtpInput.Size = new System.Drawing.Size(95, 20);
+            this.dtpInput.TabIndex = 4;
+            // 
+            // dtpOutput
+            // 
+            this.dtpOutput.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpOutput.Location = new System.Drawing.Point(284, 19);
+            this.dtpOutput.Name = "dtpOutput";
+            this.dtpOutput.Size = new System.Drawing.Size(102, 20);
+            this.dtpOutput.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dtpOutput);
+            this.groupBox1.Controls.Add(this.dtpInput);
+            this.groupBox1.Controls.Add(this.btLapBaoCao);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(776, 77);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nhập ngày cần xem";
+            // 
+            // crpView
+            // 
+            this.crpView.ActiveViewIndex = 0;
+            this.crpView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.crpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crpView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crpView.Location = new System.Drawing.Point(4, 17);
+            this.crpView.Name = "crpView";
+            this.crpView.ReportSource = this.crpBCHDNgay1;
+            this.crpView.Size = new System.Drawing.Size(770, 324);
+            this.crpView.TabIndex = 1;
+            this.crpView.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // FrmBCHDNgay
             // 
@@ -109,20 +117,21 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmBCHDNgay";
             this.Text = "FrmBCHDNgay";
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crpView;
-        private crpBCHDNgay crpBCHDNgay1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtpOutput;
-        private System.Windows.Forms.DateTimePicker dtpInput;
-        private System.Windows.Forms.Button btLapBaoCao;
         private System.Windows.Forms.GroupBox groupBox2;
+        private crpBCHDNgay crpBCHDNgay1;
+        private System.Windows.Forms.Button btLapBaoCao;
+        private System.Windows.Forms.DateTimePicker dtpInput;
+        private System.Windows.Forms.DateTimePicker dtpOutput;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crpView;
     }
 }
